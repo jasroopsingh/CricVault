@@ -175,6 +175,58 @@ LSG_vs_DC = [
     },
 ]
 
+
+RR_vs_SRH = [
+    {
+        'match_number': 4,
+        'info': {
+            'city': 'Hyderabad',
+            'competition': 'IPL',
+            'dates': ['2023-04-02'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 72
+                },
+                'winner': 'Rajasthan Royals'
+            },
+            'overs': 20,
+            'player_of_match': ['JC Buttler'],
+            'players': {
+                'Rajasthan Royals': [
+                    'NA Saini',
+                    'YBK Jaiswal',
+                    'JC Buttler',
+                    'SV Samson',
+                    'D Padikkal',
+                    'R Parag',
+                    'SO Hetmyer',
+                    'R Ashwin',
+                    'JO Holder',
+                    'TA Boult',
+                    'KM Asif',
+                    'YS Chahal'
+                ],
+                'Sunrisers Hyderabad': [
+                    'Fazalhaq Farooqi',
+                    'Abhishek Sharma',
+                    'MA Agarwal',
+                    'RA Tripathi',
+                    'HC Brook',
+                    'Washington Sundar',
+                    'GD Phillips',
+                    'Abdul Samad',
+                    'AU Rashid',
+                    'B Kumar',
+                    'Umran Malik',
+                    'T Natarajan'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
