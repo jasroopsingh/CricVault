@@ -381,6 +381,57 @@ DC_vs_GT = [
     },
 ]
 
+PBKS_vs_RR = [
+    {
+        'match_number': 8,
+        'info': {
+            'city': 'Guwahati',
+            'competition': 'IPL',
+            'dates': ['2023-04-05'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 5
+                },
+                'winner': 'Punjab Kings'
+            },
+            'overs': 20,
+            'player_of_match': ['NT Ellis'],
+            'players': {
+                'Punjab Kings': [
+                    'P Simran Singh',
+                    'S Dhawan',
+                    'PBB Rajapaksa',
+                    'JM Sharma',
+                    'Sikandar Raza',
+                    'M Shahrukh Khan',
+                    'SM Curran',
+                    'Harpreet Brar',
+                    'NT Ellis',
+                    'RD Chahar',
+                    'Arshdeep Singh',
+                    'R Dhawan'
+                ],
+                'Rajasthan Royals': [
+                    'YBK Jaiswal',
+                    'R Ashwin',
+                    'JC Buttler',
+                    'SV Samson',
+                    'D Padikkal',
+                    'R Parag',
+                    'SO Hetmyer',
+                    'Dhruv Jurel',
+                    'JO Holder',
+                    'YS Chahal',
+                    'TA Boult',
+                    'KM Asif'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
