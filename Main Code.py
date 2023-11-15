@@ -13,7 +13,6 @@ def get_match_info(matches, match_number):
         A dictionary containing the match information for the specified match number.
         Returns an empty dictionary if the match number is not found.
     """
-
     # Iterate through the matches to find the match with the specified match number
     for match in matches:
         if match.get('match_number') == match_number:
@@ -22,57 +21,57 @@ def get_match_info(matches, match_number):
     # Return an empty dictionary if the match number is not found
     return {}
 
-
-# Example usage:
-
 # Define the list of matches
-KXIP_vs_RR = [
+GT_vsCSK = [
     {
         'match_number': 1,
         'info': {
-            'city': 'Jaipur',
+            'city': 'Ahmedabad',
             'competition': 'IPL',
-            'dates': ['2008-04-21'],
+            'dates': ['2023-03-31'],
+            'gender': 'male',
             'match_type': 'T20',
             'outcome': {
                 'by': {
-                    'wickets': 6
+                    'wickets': 5
                 },
-                'winner': 'Rajasthan Royals'
+                'winner': 'Gujarat Titans'
             },
             'overs': 20,
-            'player_of_match': ['SR Watson'],
+            'player_of_match': ['Rashid Khan'],
             'players': {
-                'Kings XI Punjab': [
-                    'K Goel',
-                    'JR Hopes',
-                    'KC Sangakkara',
-                    'DPMD Jayawardene',
-                    'Yuvraj Singh',
-                    'IK Pathan',
-                    'S Sohal',
-                    'B Lee',
-                    'PP Chawla',
-                    'WA Mota',
-                    'S Sreesanth'
-                ],
-                'Rajasthan Royals': [
-                    'M Kaif',
-                    'Kamran Akmal',
-                    'YK Pathan',
-                    'SR Watson',
-                    'DS Lehmann',
+                'Chennai Super Kings': [
+                    'TU Deshpande',
+                    'DP Conway',
+                    'RD Gaikwad',
+                    'MM Ali',
+                    'BA Stokes',
+                    'AT Rayudu',
+                    'S Dube',
                     'RA Jadeja',
-                    'Pankaj Singh',
-                    'D Salunkhe',
-                    'SK Warne',
-                    'SK Trivedi',
-                    'MM Patel'
+                    'MS Dhoni',
+                    'MJ Santner',
+                    'DL Chahar',
+                    'RS Hangargekar'
+                ],
+                'Gujarat Titans': [
+                    'KS Williamson',
+                    'WP Saha',
+                    'Shubman Gill',
+                    'B Sai Sudharsan',
+                    'HH Pandya',
+                    'V Shankar',
+                    'R Tewatia',
+                    'Rashid Khan',
+                    'Mohammed Shami',
+                    'J Little',
+                    'Yash Dayal',
+                    'AS Joseph'
                 ]
             }
         }
     },
-    # Add more matches here...
+    # Add more matches if needed
 ]
 
 # Get the match information for match number 1
