@@ -22,7 +22,7 @@ def get_match_info(matches, match_number):
     return {}
 
 # Define the list of matches
-GT_vsCSK = [
+GT_vs_CSK = [
     {
         'match_number': 1,
         'info': {
@@ -71,11 +71,61 @@ GT_vsCSK = [
             }
         }
     },
-    # Add more matches if needed
+]
+PBKS_vs_KKR = [
+    {
+        'match_number': 2,
+        'info': {
+            'city': 'Chandigarh',
+            'competition': 'IPL',
+            'dates': ['2023-04-01'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 7
+                },
+                'method': 'D/L',
+                'winner': 'Punjab Kings'
+            },
+            'overs': 20,
+            'player_of_match': ['Arshdeep Singh'],
+            'players': {
+                'Punjab Kings': [
+                    'P Simran Singh',
+                    'S Dhawan',
+                    'PBB Rajapaksa',
+                    'JM Sharma',
+                    'Sikandar Raza',
+                    'SM Curran',
+                    'M Shahrukh Khan',
+                    'Harpreet Brar',
+                    'RD Chahar',
+                    'Arshdeep Singh',
+                    'NT Ellis',
+                    'R Dhawan'
+                ],
+                'Kolkata Knight Riders': [
+                    'Mandeep Singh',
+                    'Rahmanullah Gurbaz',
+                    'AS Roy',
+                    'VR Iyer',
+                    'N Rana',
+                    'RK Singh',
+                    'AD Russell',
+                    'SN Thakur',
+                    'SP Narine',
+                    'TG Southee',
+                    'UT Yadav',
+                    'CV Varun'
+                ]
+            }
+        }
+    },
 ]
 
 # Get the match information for match number 1
-match_info = get_match_info(KXIP_vs_RR, 1)
+match_info = get_match_info(GT_vs_CSK, 1)
 
 # Print the match information
 if match_info:
