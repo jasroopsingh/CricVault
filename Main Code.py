@@ -227,6 +227,56 @@ RR_vs_SRH = [
     },
 ]
 
+MI_vs_RCB = [
+    {
+        'match_number': 5,
+        'info': {
+            'city': 'Bengaluru',
+            'competition': 'IPL',
+            'dates': ['2023-04-02'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 8
+                },
+                'winner': 'Royal Challengers Bangalore'
+            },
+            'overs': 20,
+            'player_of_match': ['F du Plessis'],
+            'players': {
+                'Mumbai Indians': [
+                    'JP Behrendorff',
+                    'RG Sharma',
+                    'Ishan Kishan',
+                    'C Green',
+                    'SA Yadav',
+                    'Tilak Varma',
+                    'N Wadhera',
+                    'TH David',
+                    'HR Shokeen',
+                    'Arshad Khan',
+                    'PP Chawla',
+                    'JC Archer'
+                ],
+                'Royal Challengers Bangalore': [
+                    'V Kohli',
+                    'F du Plessis',
+                    'KD Karthik',
+                    'GJ Maxwell',
+                    'MG Bracewell',
+                    'Shahbaz Ahmed',
+                    'HV Patel',
+                    'Akash Deep',
+                    'RJW Topley',
+                    'Mohammed Siraj',
+                    'KV Sharma'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
