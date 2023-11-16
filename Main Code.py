@@ -1043,6 +1043,57 @@ RCB_vs_DC = [
     },
 ]
 
+LSG_vs_PBKS = [
+    {
+        'match_number': 21,
+        'info': {
+            'city': 'Lucknow',
+            'competition': 'IPL',
+            'dates': ['2023-04-15'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 2
+                },
+                'winner': 'Punjab Kings'
+            },
+            'overs': 20,
+            'player_of_match': ['Sikandar Raza'],
+            'players': {
+                'Lucknow Super Giants': [
+                    'KL Rahul',
+                    'KR Mayers',
+                    'DJ Hooda',
+                    'KH Pandya',
+                    'N Pooran',
+                    'MP Stoinis',
+                    'A Badoni',
+                    'K Gowtham',
+                    'Yudhvir Singh',
+                    'Ravi Bishnoi',
+                    'Avesh Khan',
+                    'MA Wood'
+                ],
+                'Punjab Kings': [
+                    'Atharva Taide',
+                    'P Simran Singh',
+                    'MW Short',
+                    'Harpreet Singh',
+                    'Sikandar Raza',
+                    'SM Curran',
+                    'JM Sharma',
+                    'M Shahrukh Khan',
+                    'Harpreet Brar',
+                    'K Rabada',
+                    'RD Chahar',
+                    'Arshdeep Singh'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
