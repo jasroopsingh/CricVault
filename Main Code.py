@@ -1298,6 +1298,57 @@ MI_vs_SRH = [
     },
 ]
 
+LSG_vs_RR = [
+    {
+        'match_number': 25,
+        'info': {
+            'city': 'Jaipur',
+            'competition': 'IPL',
+            'dates': ['2023-04-19'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 10
+                },
+                'winner': 'Lucknow Super Giants'
+            },
+            'overs': 20,
+            'player_of_match': ['MP Stoinis'],
+            'players': {
+                'Lucknow Super Giants': [
+                    'A Mishra',
+                    'KL Rahul',
+                    'KR Mayers',
+                    'A Badoni',
+                    'DJ Hooda',
+                    'MP Stoinis',
+                    'N Pooran',
+                    'KH Pandya',
+                    'Yudhvir Singh',
+                    'Naveen-ul-Haq',
+                    'Ravi Bishnoi',
+                    'Avesh Khan'
+                ],
+                'Rajasthan Royals': [
+                    'YS Chahal',
+                    'YBK Jaiswal',
+                    'JC Buttler',
+                    'SV Samson',
+                    'D Padikkal',
+                    'SO Hetmyer',
+                    'R Parag',
+                    'Dhruv Jurel',
+                    'R Ashwin',
+                    'JO Holder',
+                    'TA Boult',
+                    'Sandeep Sharma'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
