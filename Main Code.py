@@ -1145,6 +1145,57 @@ KKR_vs_MI = [
     },
 ]
 
+GT_vs_RR = [
+    {
+        'match_number': 22,
+        'info': {
+            'city': 'Ahmedabad',
+            'competition': 'IPL',
+            'dates': ['2023-04-16'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 3
+                },
+                'winner': 'Rajasthan Royals'
+            },
+            'overs': 20,
+            'player_of_match': ['SO Hetmyer'],
+            'players': {
+                'Gujarat Titans': [
+                    'Noor Ahmad',
+                    'WP Saha',
+                    'Shubman Gill',
+                    'B Sai Sudharsan',
+                    'HH Pandya',
+                    'DA Miller',
+                    'A Manohar',
+                    'R Tewatia',
+                    'Rashid Khan',
+                    'AS Joseph',
+                    'Mohammed Shami',
+                    'MM Sharma'
+                ],
+                'Rajasthan Royals': [
+                    'YS Chahal',
+                    'YBK Jaiswal',
+                    'JC Buttler',
+                    'D Padikkal',
+                    'SV Samson',
+                    'R Parag',
+                    'SO Hetmyer',
+                    'Dhruv Jurel',
+                    'R Ashwin',
+                    'TA Boult',
+                    'Sandeep Sharma',
+                    'A Zampa'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
