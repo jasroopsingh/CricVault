@@ -891,6 +891,56 @@ RR_vs_CSK = [
     },
 ]
 
+PBKS_vs_GT = [
+    {
+        'match_number': 18,
+        'info': {
+            'city': 'Chandigarh',
+            'competition': 'IPL',
+            'dates': ['2023-04-13'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 6
+                },
+                'winner': 'Gujarat Titans'
+            },
+            'overs': 20,
+            'player_of_match': ['MM Sharma'],
+            'players': {
+                'Punjab Kings': [
+                    'RD Chahar',
+                    'P Simran Singh',
+                    'S Dhawan',
+                    'MW Short',
+                    'PBB Rajapaksa',
+                    'JM Sharma',
+                    'SM Curran',
+                    'M Shahrukh Khan',
+                    'Harpreet Brar',
+                    'R Dhawan',
+                    'K Rabada',
+                    'Arshdeep Singh'
+                ],
+                'Gujarat Titans': [
+                    'WP Saha',
+                    'Shubman Gill',
+                    'B Sai Sudharsan',
+                    'HH Pandya',
+                    'DA Miller',
+                    'R Tewatia',
+                    'Rashid Khan',
+                    'AS Joseph',
+                    'Mohammed Shami',
+                    'MM Sharma',
+                    'J Little'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
