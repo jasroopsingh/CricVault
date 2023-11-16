@@ -789,6 +789,57 @@ RCB_vs_LSG = [
     },
 ]
 
+DC_vs_MI = [
+    {
+        'match_number': 16,
+        'info': {
+            'city': 'Delhi',
+            'competition': 'IPL',
+            'dates': ['2023-04-11'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 6
+                },
+                'winner': 'Mumbai Indians'
+            },
+            'overs': 20,
+            'player_of_match': ['RG Sharma'],
+            'players': {
+                'Delhi Capitals': [
+                    'Mukesh Kumar',
+                    'DA Warner',
+                    'PP Shaw',
+                    'MK Pandey',
+                    'YV Dhull',
+                    'R Powell',
+                    'Lalit Yadav',
+                    'AR Patel',
+                    'Abishek Porel',
+                    'Kuldeep Yadav',
+                    'A Nortje',
+                    'Mustafizur Rahman'
+                ],
+                'Mumbai Indians': [
+                    'RP Meredith',
+                    'RG Sharma',
+                    'Ishan Kishan',
+                    'Tilak Varma',
+                    'SA Yadav',
+                    'TH David',
+                    'C Green',
+                    'N Wadhera',
+                    'HR Shokeen',
+                    'Arshad Khan',
+                    'JP Behrendorff',
+                    'PP Chawla'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
