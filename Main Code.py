@@ -1246,6 +1246,58 @@ CSK_vs_RCB = [
         }
     },
 ]
+
+MI_vs_SRH = [
+    {
+        'match_number': 24,
+        'info': {
+            'city': 'Hyderabad',
+            'competition': 'IPL',
+            'dates': ['2023-04-18'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 14
+                },
+                'winner': 'Mumbai Indians'
+            },
+            'overs': 20,
+            'player_of_match': ['C Green'],
+            'players': {
+                'Mumbai Indians': [
+                    'RP Meredith',
+                    'RG Sharma',
+                    'Ishan Kishan',
+                    'C Green',
+                    'SA Yadav',
+                    'Tilak Varma',
+                    'TH David',
+                    'N Wadhera',
+                    'Arjun Tendulkar',
+                    'HR Shokeen',
+                    'PP Chawla',
+                    'JP Behrendorff'
+                ],
+                'Sunrisers Hyderabad': [
+                    'T Natarajan',
+                    'HC Brook',
+                    'MA Agarwal',
+                    'RA Tripathi',
+                    'AK Markram',
+                    'Abhishek Sharma',
+                    'H Klaasen',
+                    'Abdul Samad',
+                    'M Jansen',
+                    'Washington Sundar',
+                    'B Kumar',
+                    'M Markande'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
