@@ -941,6 +941,57 @@ PBKS_vs_GT = [
     },
 ]
 
+KKR_vs_SRH = [
+    {
+        'match_number': 19,
+        'info': {
+            'city': 'Kolkata',
+            'competition': 'IPL',
+            'dates': ['2023-04-14'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 23
+                },
+                'winner': 'Sunrisers Hyderabad'
+            },
+            'overs': 20,
+            'player_of_match': ['HC Brook'],
+            'players': {
+                'Sunrisers Hyderabad': [
+                    'Washington Sundar',
+                    'HC Brook',
+                    'MA Agarwal',
+                    'RA Tripathi',
+                    'AK Markram',
+                    'Abhishek Sharma',
+                    'H Klaasen',
+                    'M Jansen',
+                    'M Markande',
+                    'B Kumar',
+                    'Umran Malik',
+                    'T Natarajan'
+                ],
+                'Kolkata Knight Riders': [
+                    'Suyash Sharma',
+                    'Rahmanullah Gurbaz',
+                    'N Jagadeesan',
+                    'VR Iyer',
+                    'SP Narine',
+                    'N Rana',
+                    'AD Russell',
+                    'RK Singh',
+                    'SN Thakur',
+                    'UT Yadav',
+                    'LH Ferguson',
+                    'CV Varun'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
