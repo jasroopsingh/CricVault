@@ -1094,6 +1094,57 @@ LSG_vs_PBKS = [
     },
 ]
 
+KKR_vs_MI = [
+    {
+        'match_number': 22,
+        'info': {
+            'city': 'Mumbai',
+            'competition': 'IPL',
+            'dates': ['2023-04-16'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 5
+                },
+                'winner': 'Mumbai Indians'
+            },
+            'overs': 20,
+            'player_of_match': ['VR Iyer'],
+            'players': {
+                'Kolkata Knight Riders': [
+                    'Suyash Sharma',
+                    'Rahmanullah Gurbaz',
+                    'N Jagadeesan',
+                    'VR Iyer',
+                    'N Rana',
+                    'SN Thakur',
+                    'RK Singh',
+                    'AD Russell',
+                    'SP Narine',
+                    'UT Yadav',
+                    'LH Ferguson',
+                    'CV Varun'
+                ],
+                'Mumbai Indians': [
+                    'RP Meredith',
+                    'RG Sharma',
+                    'Ishan Kishan',
+                    'SA Yadav',
+                    'Tilak Varma',
+                    'TH David',
+                    'N Wadhera',
+                    'C Green',
+                    'Arjun Tendulkar',
+                    'HR Shokeen',
+                    'PP Chawla',
+                    'D Jansen'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
