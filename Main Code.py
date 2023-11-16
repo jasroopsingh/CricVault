@@ -1196,6 +1196,56 @@ GT_vs_RR = [
     },
 ]
 
+CSK_vs_RCB = [
+    {
+        'match_number': 23,
+        'info': {
+            'city': 'Bengaluru',
+            'competition': 'IPL',
+            'dates': ['2023-04-17'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 8
+                },
+                'winner': 'Chennai Super Kings'
+            },
+            'overs': 20,
+            'player_of_match': ['DP Conway'],
+            'players': {
+                'Chennai Super Kings': [
+                    'RD Gaikwad',
+                    'DP Conway',
+                    'AM Rahane',
+                    'S Dube',
+                    'AT Rayudu',
+                    'MM Ali',
+                    'RA Jadeja',
+                    'MS Dhoni',
+                    'TU Deshpande',
+                    'M Theekshana',
+                    'M Pathirana',
+                    'Akash Singh'
+                ],
+                'Royal Challengers Bangalore': [
+                    'V Kohli',
+                    'F du Plessis',
+                    'MK Lomror',
+                    'GJ Maxwell',
+                    'Shahbaz Ahmed',
+                    'KD Karthik',
+                    'SS Prabhudessai',
+                    'WD Parnell',
+                    'PWH de Silva',
+                    'HV Patel',
+                    'Mohammed Siraj',
+                    'Vijaykumar Vyshak'
+                ]
+            }
+        }
+    },
+]
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
