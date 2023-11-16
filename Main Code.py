@@ -484,6 +484,57 @@ KKR_vs_RCB = [
     },
 ]
 
+SRH_vs_LSG = [
+    {
+        'match_number': 10,
+        'info': {
+            'city': 'Lucknow',
+            'competition': 'IPL',
+            'dates': ['2023-04-07'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'wickets': 5
+                },
+                'winner': 'Lucknow Super Giants'
+            },
+            'overs': 20,
+            'player_of_match': ['KH Pandya'],
+            'players': {
+                'Sunrisers Hyderabad': [
+                    'Fazalhaq Farooqi',
+                    'Anmolpreet Singh',
+                    'MA Agarwal',
+                    'RA Tripathi',
+                    'AK Markram',
+                    'HC Brook',
+                    'Washington Sundar',
+                    'Abdul Samad',
+                    'AU Rashid',
+                    'Umran Malik',
+                    'B Kumar',
+                    'T Natarajan'
+                ],
+                'Lucknow Super Giants': [
+                    'A Mishra',
+                    'KR Mayers',
+                    'KL Rahul',
+                    'DJ Hooda',
+                    'KH Pandya',
+                    'MP Stoinis',
+                    'R Shepherd',
+                    'N Pooran',
+                    'Yash Thakur',
+                    'JD Unadkat',
+                    'Ravi Bishnoi',
+                    'A Badoni'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
