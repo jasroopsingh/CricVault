@@ -1808,6 +1808,57 @@ GT_vs_MI = [
     },
 ]
 
+KKR_vs_RCB = [
+    {
+        'match_number': 35,
+        'info': {
+            'city': 'Bengaluru',
+            'competition': 'IPL',
+            'dates': ['2023-04-26'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 21
+                },
+                'winner': 'Kolkata Knight Riders'
+            },
+            'overs': 20,
+            'player_of_match': ['CV Varun'],
+            'players': {
+                'Kolkata Knight Riders': [
+                    'Suyash Sharma',
+                    'JJ Roy',
+                    'N Jagadeesan',
+                    'VR Iyer',
+                    'N Rana',
+                    'AD Russell',
+                    'RK Singh',
+                    'D Wiese',
+                    'SP Narine',
+                    'VG Arora',
+                    'UT Yadav',
+                    'CV Varun'
+                ],
+                'Royal Challengers Bangalore': [
+                    'HV Patel',
+                    'V Kohli',
+                    'F du Plessis',
+                    'Shahbaz Ahmed',
+                    'GJ Maxwell',
+                    'MK Lomror',
+                    'KD Karthik',
+                    'SS Prabhudessai',
+                    'PWH de Silva',
+                    'DJ Willey',
+                    'Vijaykumar Vyshak',
+                    'Mohammed Siraj'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
