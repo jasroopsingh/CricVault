@@ -1553,6 +1553,57 @@ GT_vs_LSG = [
     },
 ]
 
+PK_vs_MI = [
+    {
+        'match_number': 30,
+        'info': {
+            'city': 'Mumbai',
+            'competition': 'IPL',
+            'dates': ['2023-04-22'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 13
+                },
+                'winner': 'Punjab Kings'
+            },
+            'overs': 20,
+            'player_of_match': ['SM Curran'],
+            'players': {
+                'Punjab Kings': [
+                    'NT Ellis',
+                    'MW Short',
+                    'P Simran Singh',
+                    'Atharva Taide',
+                    'LS Livingstone',
+                    'Harpreet Singh',
+                    'SM Curran',
+                    'JM Sharma',
+                    'M Shahrukh Khan',
+                    'Harpreet Brar',
+                    'Arshdeep Singh',
+                    'RD Chahar'
+                ],
+                'Mumbai Indians': [
+                    'JP Behrendorff',
+                    'RG Sharma',
+                    'Ishan Kishan',
+                    'C Green',
+                    'SA Yadav',
+                    'TH David',
+                    'Tilak Varma',
+                    'N Wadhera',
+                    'JC Archer',
+                    'Arjun Tendulkar',
+                    'HR Shokeen',
+                    'PP Chawla'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
