@@ -1757,6 +1757,57 @@ DC_vs_SRH = [
     },
 ]
 
+GT_vs_MI = [
+    {
+        'match_number': 34,
+        'info': {
+            'city': 'Ahmedabad',
+            'competition': 'IPL',
+            'dates': ['2023-04-25'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 55
+                },
+                'winner': 'Gujarat Titans'
+            },
+            'overs': 20,
+            'player_of_match': ['A Manohar'],
+            'players': {
+                'Gujarat Titans': [
+                    'J Little',
+                    'WP Saha',
+                    'Shubman Gill',
+                    'HH Pandya',
+                    'V Shankar',
+                    'DA Miller',
+                    'A Manohar',
+                    'R Tewatia',
+                    'Rashid Khan',
+                    'MM Sharma',
+                    'Mohammed Shami',
+                    'Noor Ahmad'
+                ],
+                'Mumbai Indians': [
+                    'K Kartikeya',
+                    'RG Sharma',
+                    'Ishan Kishan',
+                    'C Green',
+                    'Tilak Varma',
+                    'SA Yadav',
+                    'TH David',
+                    'N Wadhera',
+                    'PP Chawla',
+                    'Arjun Tendulkar',
+                    'JP Behrendorff',
+                    'RP Meredith'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
