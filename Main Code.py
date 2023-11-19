@@ -1604,6 +1604,57 @@ PK_vs_MI = [
     },
 ]
 
+RCB_vs_MI = [
+    {
+        'match_number': 31,
+        'info': {
+            'city': 'Bengaluru',
+            'competition': 'IPL',
+            'dates': ['2023-04-23'],
+            'gender': 'male',
+            'match_type': 'T20',
+            'outcome': {
+                'by': {
+                    'runs': 7
+                },
+                'winner': 'Royal Challengers Bangalore'
+            },
+            'overs': 20,
+            'player_of_match': ['GJ Maxwell'],
+            'players': {
+                'Royal Challengers Bangalore': [
+                    'HV Patel',
+                    'V Kohli',
+                    'F du Plessis',
+                    'Shahbaz Ahmed',
+                    'GJ Maxwell',
+                    'MK Lomror',
+                    'KD Karthik',
+                    'SS Prabhudessai',
+                    'PWH de Silva',
+                    'DJ Willey',
+                    'Vijaykumar Vyshak',
+                    'Mohammed Siraj'
+                ],
+                'Rajasthan Royals': [
+                    'YBK Jaiswal',
+                    'JC Buttler',
+                    'D Padikkal',
+                    'SV Samson',
+                    'SO Hetmyer',
+                    'Dhruv Jurel',
+                    'R Ashwin',
+                    'Abdul Basith',
+                    'JO Holder',
+                    'TA Boult',
+                    'Sandeep Sharma',
+                    'YS Chahal'
+                ]
+            }
+        }
+    },
+]
+
 # Get the match information for match number 1
 match_info = get_match_info(GT_vs_CSK, 1)
 
