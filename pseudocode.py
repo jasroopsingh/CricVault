@@ -15,8 +15,26 @@
     # date
     # match number of the league
 
-# ----- START OF PROGRAM ----- #
+"""
+Retrieves the match information for a specific match number.
 
+Parameters:
+- matches: list
+    A list of match dictionaries containing the match information.
+- match_number: int
+    The match number for which the information is to be retrieved.
+
+Returns:
+- dict:
+    A dictionary containing the match information for the specified match number.
+    Returns an empty dictionary if the match number is not found.
+"""
+
+#IMPORT VARIABLES FROM ONE FILE TO ANOTHER
+    #SYNTAX: from {file name} import {function name}
+    #https://medium.com/geekculture/how-to-import-another-file-in-python-4f833ea462b1
+
+# ----- START OF PROGRAM ----- #
 pip install python-cricket-scraper #using pip packet manager to install cricket scraper software
 
 from cricscraper.cricsheet import CricSheet
