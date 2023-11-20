@@ -1,27 +1,12 @@
 def get_match_info(matches, match_number):
-    """
-    Retrieves the match information for a specific match number.
-
-    Parameters:
-    - matches: list
-        A list of match dictionaries containing the match information.
-    - match_number: int
-        The match number for which the information is to be retrieved.
-
-    Returns:
-    - dict:
-        A dictionary containing the match information for the specified match number.
-        Returns an empty dictionary if the match number is not found.
-    """
-    # Iterate through the matches to find the match with the specified match number
+    #Go through the list matches to find the match with the specified match number
     for match in matches:
         if match.get('match_number') == match_number:
             return match
-
-    # Return an empty dictionary if the match number is not found
+    #Return an empty dictionary if the match number is not found
     return {}
 
-# Define the list of matches
+#Define the list of matches
 GT_vs_CSK = [
     {
         'match_number': 1,
