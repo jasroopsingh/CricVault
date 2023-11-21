@@ -1,4 +1,4 @@
-from 2023_IPL_Match_Database.py import get_match_info
+from matchDatabase import *
 
 # Get the match information
 match_info = get_match_info(GT_vs_CSK, 1)
