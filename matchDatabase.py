@@ -181,9 +181,10 @@ LSG_vs_DC = [
         }
     },
 ]
-CSKvsDC = LSG_vs_DC
-DCvsCSK = LSG_vs_DC
+LSGvsDC = LSG_vs_DC
+DCvsLSG = LSG_vs_DC
 
+#Match 4 - RR vs SRH
 RR_vs_SRH = [
     {
         'match_number': 4,
@@ -234,7 +235,10 @@ RR_vs_SRH = [
         }
     },
 ]
+RRvsSRH = RR_vs_SRH
+SRHvsRR = RR_vs_SRH
 
+#Match 5 - MI vs RCB
 MI_vs_RCB = [
     {
         'match_number': 5,
@@ -284,8 +288,10 @@ MI_vs_RCB = [
         }
     },
 ]
+MIvsRCB = MI_vs_RCB
+RCBvsMI = MI_vs_RCB
 
-
+#Match 6 - CSK vs LSG
 CSK_vs_LSG = [
     {
         'match_number': 6,
@@ -336,8 +342,10 @@ CSK_vs_LSG = [
         }
     },
 ]
+CSKvsLSG = CSK_vs_LSG
+LSGvsCSK = CSK_vs_LSG
 
-
+#Match 7 - DC vs GT
 DC_vs_GT = [
     {
         'match_number': 7,
@@ -388,7 +396,10 @@ DC_vs_GT = [
         }
     },
 ]
+DCvsGT = DC_vs_GT
+GTvsDC = DC_vs_GT
 
+#Match 8 - PBKS vs RR
 PBKS_vs_RR = [
     {
         'match_number': 8,
@@ -439,6 +450,8 @@ PBKS_vs_RR = [
         }
     },
 ]
+PBKSvsRR = PBKS_vs_RR 
+RRvsPBKS = PBKS_vs_RR 
 
 
 KKR_vs_RCB = [
