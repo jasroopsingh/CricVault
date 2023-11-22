@@ -1,7 +1,7 @@
 from matchDatabase import *
 
 # Get the match information
-match_info = get_match_info(GT_vs_CSK, 1)
+match_info = get_match_info(GTvsCSK, 1)
 
 # Print the match information
 if match_info:
