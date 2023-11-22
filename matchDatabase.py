@@ -14,7 +14,7 @@ def get_match_info(matches, match_number):
     for match in matches:
         if match['match_number'] == match_number:
             return match
-    #Return an empty dictionary if the match number is not found
+    #Return an empty dictionary if the match number is not found in Database
     return {}
 
 # ╔══════════════════════════════════════════════════╗

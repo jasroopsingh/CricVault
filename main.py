@@ -1,7 +1,10 @@
 from matchDatabase import *
 
 # Get the match information
-match_info = get_match_info(GTvsCSK, 1)
+userMatch = input("Match name: ")
+matchNum = int(input("Match Number: "))
+
+match_info = get_match_info(userMatch, matchNum)
 
 # Print the match information
 if match_info:
@@ -18,6 +21,10 @@ if match_info:
             print(f"Outcome: {outcome['winner']} won by {outcome['by']['wickets']} wickets")
         elif 'runs' in outcome['by']:
             print(f"Outcome: {outcome['winner']} won by {outcome['by']['runs']} runs")
+        elif 'method' in outcome['by']:
+            print(f"Outcome: {outcome['winner']} won by {outcome['by']['method']} wickets (D/L method)")
+        elif 'method' in outcome['by']:
+            print(f"Outcome: {outcome['winner']} won by {outcome['by']['method']} runs (D/L method)")
     else:
         print(f"Outcome: {outcome['winner']}")
 
