@@ -12,7 +12,7 @@
 def get_match_info(matches, match_number):
     #Go through the list matches to find the match with the specified match number
     for match in matches:
-        if match.get('match_number') == match_number:
+        if match['match_number'] == match_number:
             return match
     #Return an empty dictionary if the match number is not found
     return {}
@@ -130,6 +130,7 @@ PBKS_vs_KKR = [
 PBKSvsKKR = PBKS_vs_KKR
 KKRvsPBKS = PBKS_vs_KKR
 
+#Match 3 - LSG vs DC
 LSG_vs_DC = [
     {
         'match_number': 3,
