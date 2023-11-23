@@ -8,11 +8,12 @@
 
 # ╔═════════════════════════════ Beigining of Code ════════════════════════════╗ #
 
-#
-def get_match_info(matches, match_number):
+def get_match_info(iplMatch, matchNumber):
+    #used to 
+    matchDatabase = globals().get(iplMatch) #.get resource - https://www.w3schools.com/python/ref_dictionary_get.asp #globals() resource - 
     #Go through the list matches to find the match with the specified match number
-    for match in matches:
-        if match['match_number'] == match_number:
+    for match in matchDatabase:
+        if match['Match Number'] == matchNumber:
             return match
     #Return an empty dictionary if the match number is not found in Database
     return {}
@@ -24,22 +25,17 @@ def get_match_info(matches, match_number):
 #Match 1 - GT vs CSK
 GT_vs_CSK = [
     {
-        'match_number': 1,
+        'Match Number': 1,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
-            'dates': ['2023-03-31'],
-            'gender': 'male',
+            'dates': '2023-03-31',
             'match_type': 'T20',
-            'outcome': {
-                'by': {
-                    'wickets': 5
-                },
-                'winner': 'Gujarat Titans'
-            },
+            'outcome': {'by': {'wickets': 5},
+                        'winner': 'Gujarat Titans'},
             'overs': 20,
-            'player_of_match': ['Rashid Khan'],
-            'players': {
+            'POTM': 'Rashid Khan',
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'TU Deshpande',
                     'DP Conway',
@@ -78,12 +74,12 @@ CSKvsGT = GT_vs_CSK
 #Match 2 - PBKS vs KKR
 PBKS_vs_KKR = [
     {
-        'match_number': 2,
+        'Match Number': 2,
         'info': {
             'city': 'Chandigarh',
             'competition': 'IPL',
             'dates': ['2023-04-01'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -93,8 +89,8 @@ PBKS_vs_KKR = [
                 'winner': 'Punjab Kings'
             },
             'overs': 20,
-            'player_of_match': ['Arshdeep Singh'],
-            'players': {
+            'POTM': ['Arshdeep Singh'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'P Simran Singh',
                     'S Dhawan',
@@ -133,12 +129,12 @@ KKRvsPBKS = PBKS_vs_KKR
 #Match 3 - LSG vs DC
 LSG_vs_DC = [
     {
-        'match_number': 3,
+        'Match Number': 3,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-04-01'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -147,8 +143,8 @@ LSG_vs_DC = [
                 'winner': 'Lucknow Super Giants'
             },
             'overs': 20,
-            'player_of_match': ['MA Wood'],
-            'players': {
+            'POTM': ['MA Wood'],
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'KL Rahul',
                     'KR Mayers',
@@ -187,12 +183,12 @@ DCvsLSG = LSG_vs_DC
 #Match 4 - RR vs SRH
 RR_vs_SRH = [
     {
-        'match_number': 4,
+        'Match Number': 4,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-04-02'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -201,8 +197,8 @@ RR_vs_SRH = [
                 'winner': 'Rajasthan Royals'
             },
             'overs': 20,
-            'player_of_match': ['JC Buttler'],
-            'players': {
+            'POTM': ['JC Buttler'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'NA Saini',
                     'YBK Jaiswal',
@@ -241,12 +237,12 @@ SRHvsRR = RR_vs_SRH
 #Match 5 - MI vs RCB
 MI_vs_RCB = [
     {
-        'match_number': 5,
+        'Match Number': 5,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-04-02'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -255,8 +251,8 @@ MI_vs_RCB = [
                 'winner': 'Royal Challengers Bangalore'
             },
             'overs': 20,
-            'player_of_match': ['F du Plessis'],
-            'players': {
+            'POTM': ['F du Plessis'],
+            'Playing XIs': {
                 'Mumbai Indians': [
                     'JP Behrendorff',
                     'RG Sharma',
@@ -294,12 +290,12 @@ RCBvsMI = MI_vs_RCB
 #Match 6 - CSK vs LSG
 CSK_vs_LSG = [
     {
-        'match_number': 6,
+        'Match Number': 6,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-04-03'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -308,8 +304,8 @@ CSK_vs_LSG = [
                 'winner': 'Chennai Super Kings'
             },
             'overs': 20,
-            'player_of_match': ['MM Ali'],
-            'players': {
+            'POTM': ['MM Ali'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'TU Deshpande',
                     'RD Gaikwad',
@@ -348,12 +344,12 @@ LSGvsCSK = CSK_vs_LSG
 #Match 7 - DC vs GT
 DC_vs_GT = [
     {
-        'match_number': 7,
+        'Match Number': 7,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-04-04'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -362,8 +358,8 @@ DC_vs_GT = [
                 'winner': 'Gujarat Titans'
             },
             'overs': 20,
-            'player_of_match': ['B Sai Sudharsan'],
-            'players': {
+            'POTM': ['B Sai Sudharsan'],
+            'Playing XIs': {
                 'Delhi Capitals': [
                     'KK Ahmed',
                     'DA Warner',
@@ -402,12 +398,12 @@ GTvsDC = DC_vs_GT
 #Match 8 - PBKS vs RR
 PBKS_vs_RR = [
     {
-        'match_number': 8,
+        'Match Number': 8,
         'info': {
             'city': 'Guwahati',
             'competition': 'IPL',
             'dates': ['2023-04-05'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -416,8 +412,8 @@ PBKS_vs_RR = [
                 'winner': 'Punjab Kings'
             },
             'overs': 20,
-            'player_of_match': ['NT Ellis'],
-            'players': {
+            'POTM': ['NT Ellis'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'P Simran Singh',
                     'S Dhawan',
@@ -456,12 +452,12 @@ RRvsPBKS = PBKS_vs_RR
 
 KKR_vs_RCB = [
     {
-        'match_number': 9,
+        'Match Number': 9,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-04-06'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -470,8 +466,8 @@ KKR_vs_RCB = [
                 'winner': 'Kolkata Knight Riders'
             },
             'overs': 20,
-            'player_of_match': ['SN Thakur'],
-            'players': {
+            'POTM': ['SN Thakur'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'Suyash Sharma',
                     'Rahmanullah Gurbaz',
@@ -507,12 +503,12 @@ KKR_vs_RCB = [
 
 SRH_vs_LSG = [
     {
-        'match_number': 10,
+        'Match Number': 10,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-04-07'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -521,8 +517,8 @@ SRH_vs_LSG = [
                 'winner': 'Lucknow Super Giants'
             },
             'overs': 20,
-            'player_of_match': ['KH Pandya'],
-            'players': {
+            'POTM': ['KH Pandya'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'Fazalhaq Farooqi',
                     'Anmolpreet Singh',
@@ -558,12 +554,12 @@ SRH_vs_LSG = [
 
 RR_vs_DC = [
     {
-        'match_number': 11,
+        'Match Number': 11,
         'info': {
             'city': 'Guwahati',
             'competition': 'IPL',
             'dates': ['2023-04-08'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -572,8 +568,8 @@ RR_vs_DC = [
                 'winner': 'Rajasthan Royals'
             },
             'overs': 20,
-            'player_of_match': ['YBK Jaiswal'],
-            'players': {
+            'POTM': ['YBK Jaiswal'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'M Ashwin',
                     'YBK Jaiswal',
@@ -609,12 +605,12 @@ RR_vs_DC = [
 
 MI_vs_CSK = [
     {
-        'match_number': 12,
+        'Match Number': 12,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-04-08'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -623,8 +619,8 @@ MI_vs_CSK = [
                 'winner': 'Chennai Super Kings'
             },
             'overs': 20,
-            'player_of_match': ['RA Jadeja'],
-            'players': {
+            'POTM': ['RA Jadeja'],
+            'Playing XIs': {
                 'Mumbai Indians': [
                     'K Kartikeya',
                     'RG Sharma',
@@ -660,12 +656,12 @@ MI_vs_CSK = [
 
 GT_vs_KKR = [
     {
-        'match_number': 13,
+        'Match Number': 13,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-04-09'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -674,8 +670,8 @@ GT_vs_KKR = [
                 'winner': 'Kolkata Knight Riders'
             },
             'overs': 20,
-            'player_of_match': ['RK Singh'],
-            'players': {
+            'POTM': ['RK Singh'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'J Little',
                     'WP Saha',
@@ -711,12 +707,12 @@ GT_vs_KKR = [
 
 PBKS_vs_SRH = [
     {
-        'match_number': 14,
+        'Match Number': 14,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-04-09'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -725,8 +721,8 @@ PBKS_vs_SRH = [
                 'winner': 'Sunrisers Hyderabad'
             },
             'overs': 20,
-            'player_of_match': ['S Dhawan'],
-            'players': {
+            'POTM': ['S Dhawan'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'P Simran Singh',
                     'S Dhawan',
@@ -761,12 +757,12 @@ PBKS_vs_SRH = [
 
 RCB_vs_LSG = [
     {
-        'match_number': 15,
+        'Match Number': 15,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-04-10'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -775,8 +771,8 @@ RCB_vs_LSG = [
                 'winner': 'Lucknow Super Giants'
             },
             'overs': 20,
-            'player_of_match': ['N Pooran'],
-            'players': {
+            'POTM': ['N Pooran'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'Anuj Rawat',
                     'V Kohli',
@@ -812,12 +808,12 @@ RCB_vs_LSG = [
 
 DC_vs_MI = [
     {
-        'match_number': 16,
+        'Match Number': 16,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-04-11'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -826,8 +822,8 @@ DC_vs_MI = [
                 'winner': 'Mumbai Indians'
             },
             'overs': 20,
-            'player_of_match': ['RG Sharma'],
-            'players': {
+            'POTM': ['RG Sharma'],
+            'Playing XIs': {
                 'Delhi Capitals': [
                     'Mukesh Kumar',
                     'DA Warner',
@@ -863,12 +859,12 @@ DC_vs_MI = [
 
 RR_vs_CSK = [
     {
-        'match_number': 17,
+        'Match Number': 17,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-04-12'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -877,8 +873,8 @@ RR_vs_CSK = [
                 'winner': 'Rajasthan Royals'
             },
             'overs': 20,
-            'player_of_match': ['R Ashwin'],
-            'players': {
+            'POTM': ['R Ashwin'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'YBK Jaiswal',
                     'JC Buttler',
@@ -914,12 +910,12 @@ RR_vs_CSK = [
 
 PBKS_vs_GT = [
     {
-        'match_number': 18,
+        'Match Number': 18,
         'info': {
             'city': 'Chandigarh',
             'competition': 'IPL',
             'dates': ['2023-04-13'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -928,8 +924,8 @@ PBKS_vs_GT = [
                 'winner': 'Gujarat Titans'
             },
             'overs': 20,
-            'player_of_match': ['MM Sharma'],
-            'players': {
+            'POTM': ['MM Sharma'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'RD Chahar',
                     'P Simran Singh',
@@ -964,12 +960,12 @@ PBKS_vs_GT = [
 
 KKR_vs_SRH = [
     {
-        'match_number': 19,
+        'Match Number': 19,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-04-14'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -978,8 +974,8 @@ KKR_vs_SRH = [
                 'winner': 'Sunrisers Hyderabad'
             },
             'overs': 20,
-            'player_of_match': ['HC Brook'],
-            'players': {
+            'POTM': ['HC Brook'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'Washington Sundar',
                     'HC Brook',
@@ -1015,12 +1011,12 @@ KKR_vs_SRH = [
 
 RCB_vs_DC = [
     {
-        'match_number': 20,
+        'Match Number': 20,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-04-15'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1029,8 +1025,8 @@ RCB_vs_DC = [
                 'winner': 'Royal Challengers Bangalore'
             },
             'overs': 20,
-            'player_of_match': ['V Kohli'],
-            'players': {
+            'POTM': ['V Kohli'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'V Kohli',
                     'F du Plessis',
@@ -1066,12 +1062,12 @@ RCB_vs_DC = [
 
 LSG_vs_PBKS = [
     {
-        'match_number': 21,
+        'Match Number': 21,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-04-15'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1080,8 +1076,8 @@ LSG_vs_PBKS = [
                 'winner': 'Punjab Kings'
             },
             'overs': 20,
-            'player_of_match': ['Sikandar Raza'],
-            'players': {
+            'POTM': ['Sikandar Raza'],
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'KL Rahul',
                     'KR Mayers',
@@ -1117,12 +1113,12 @@ LSG_vs_PBKS = [
 
 KKR_vs_MI = [
     {
-        'match_number': 22,
+        'Match Number': 22,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-04-16'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1131,8 +1127,8 @@ KKR_vs_MI = [
                 'winner': 'Mumbai Indians'
             },
             'overs': 20,
-            'player_of_match': ['VR Iyer'],
-            'players': {
+            'POTM': ['VR Iyer'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'Suyash Sharma',
                     'Rahmanullah Gurbaz',
@@ -1168,12 +1164,12 @@ KKR_vs_MI = [
 
 GT_vs_RR = [
     {
-        'match_number': 22,
+        'Match Number': 23,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-04-16'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1182,8 +1178,8 @@ GT_vs_RR = [
                 'winner': 'Rajasthan Royals'
             },
             'overs': 20,
-            'player_of_match': ['SO Hetmyer'],
-            'players': {
+            'POTM': ['SO Hetmyer'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'Noor Ahmad',
                     'WP Saha',
@@ -1219,12 +1215,12 @@ GT_vs_RR = [
 
 CSK_vs_RCB = [
     {
-        'match_number': 23,
+        'Match Number': 24,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-04-17'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1233,8 +1229,8 @@ CSK_vs_RCB = [
                 'winner': 'Chennai Super Kings'
             },
             'overs': 20,
-            'player_of_match': ['DP Conway'],
-            'players': {
+            'POTM': ['DP Conway'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'RD Gaikwad',
                     'DP Conway',
@@ -1270,12 +1266,12 @@ CSK_vs_RCB = [
 
 MI_vs_SRH = [
     {
-        'match_number': 24,
+        'Match Number': 25,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-04-18'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1284,8 +1280,8 @@ MI_vs_SRH = [
                 'winner': 'Mumbai Indians'
             },
             'overs': 20,
-            'player_of_match': ['C Green'],
-            'players': {
+            'POTM': ['C Green'],
+            'Playing XIs': {
                 'Mumbai Indians': [
                     'RP Meredith',
                     'RG Sharma',
@@ -1321,12 +1317,12 @@ MI_vs_SRH = [
 
 LSG_vs_RR = [
     {
-        'match_number': 25,
+        'Match Number': 26,
         'info': {
             'city': 'Jaipur',
             'competition': 'IPL',
             'dates': ['2023-04-19'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1335,8 +1331,8 @@ LSG_vs_RR = [
                 'winner': 'Lucknow Super Giants'
             },
             'overs': 20,
-            'player_of_match': ['MP Stoinis'],
-            'players': {
+            'POTM': ['MP Stoinis'],
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'A Mishra',
                     'KL Rahul',
@@ -1372,12 +1368,12 @@ LSG_vs_RR = [
 
 RCB_vs_PBKS = [
     {
-        'match_number': 26,
+        'Match Number': 27,
         'info': {
             'city': 'Chandigarh',
             'competition': 'IPL',
             'dates': ['2023-04-20'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1386,8 +1382,8 @@ RCB_vs_PBKS = [
                 'winner': 'Royal Challengers Bangalore'
             },
             'overs': 20,
-            'player_of_match': ['Mohammed Siraj'],
-            'players': {
+            'POTM': ['Mohammed Siraj'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'Vijaykumar Vyshak',
                     'V Kohli',
@@ -1423,12 +1419,12 @@ RCB_vs_PBKS = [
 
 KKR_vs_DC = [
     {
-        'match_number': 27,
+        'Match Number': 28,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-04-20'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1437,8 +1433,8 @@ KKR_vs_DC = [
                 'winner': 'Delhi Capitals'
             },
             'overs': 20,
-            'player_of_match': ['I Sharma'],
-            'players': {
+            'POTM': ['I Sharma'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'JJ Roy',
                     'Liton Das',
@@ -1474,12 +1470,12 @@ KKR_vs_DC = [
 
 SRH_vs_CSK = [
     {
-        'match_number': 28,
+        'Match Number': 29,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-04-21'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1488,8 +1484,8 @@ SRH_vs_CSK = [
                 'winner': 'Chennai Super Kings'
             },
             'overs': 20,
-            'player_of_match': ['RA Jadeja'],
-            'players': {
+            'POTM': ['RA Jadeja'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'Mayank Dagar',
                     'HC Brook',
@@ -1525,12 +1521,12 @@ SRH_vs_CSK = [
 
 GT_vs_LSG = [
     {
-        'match_number': 29,
+        'Match Number': 30,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-04-22'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1539,8 +1535,8 @@ GT_vs_LSG = [
                 'winner': 'Gujarat Titans'
             },
             'overs': 20,
-            'player_of_match': ['MM Sharma'],
-            'players': {
+            'POTM': ['MM Sharma'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'J Yadav',
                     'WP Saha',
@@ -1574,14 +1570,14 @@ GT_vs_LSG = [
     },
 ]
 
-PK_vs_MI = [
+PBKS_vs_MI = [
     {
-        'match_number': 30,
+        'Match Number': 31,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-04-22'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1590,8 +1586,8 @@ PK_vs_MI = [
                 'winner': 'Punjab Kings'
             },
             'overs': 20,
-            'player_of_match': ['SM Curran'],
-            'players': {
+            'POTM': ['SM Curran'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'NT Ellis',
                     'MW Short',
@@ -1625,14 +1621,14 @@ PK_vs_MI = [
     },
 ]
 
-RCB_vs_MI = [
+RCB_vs_RR = [
     {
-        'match_number': 31,
+        'Match Number': 32,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-04-23'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1641,8 +1637,8 @@ RCB_vs_MI = [
                 'winner': 'Royal Challengers Bangalore'
             },
             'overs': 20,
-            'player_of_match': ['GJ Maxwell'],
-            'players': {
+            'POTM': ['GJ Maxwell'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'HV Patel',
                     'V Kohli',
@@ -1678,12 +1674,12 @@ RCB_vs_MI = [
 
 CSK_vs_KKR = [
     {
-        'match_number': 32,
+        'Match Number': 33,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-04-23'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1692,8 +1688,8 @@ CSK_vs_KKR = [
                 'winner': 'Chennai Super Kings'
             },
             'overs': 20,
-            'player_of_match': ['AM Rahane'],
-            'players': {
+            'POTM': ['AM Rahane'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'Akash Singh',
                     'RD Gaikwad',
@@ -1729,12 +1725,12 @@ CSK_vs_KKR = [
 
 DC_vs_SRH = [
     {
-        'match_number': 33,
+        'Match Number': 34,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-04-24'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1743,8 +1739,8 @@ DC_vs_SRH = [
                 'winner': 'Delhi Capitals'
             },
             'overs': 20,
-            'player_of_match': ['AR Patel'],
-            'players': {
+            'POTM': ['AR Patel'],
+            'Playing XIs': {
                 'Delhi Capitals': [
                     'Mukesh Kumar',
                     'DA Warner',
@@ -1780,12 +1776,12 @@ DC_vs_SRH = [
 
 GT_vs_MI = [
     {
-        'match_number': 34,
+        'Match Number': 35,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-04-25'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1794,8 +1790,8 @@ GT_vs_MI = [
                 'winner': 'Gujarat Titans'
             },
             'overs': 20,
-            'player_of_match': ['A Manohar'],
-            'players': {
+            'POTM': ['A Manohar'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'J Little',
                     'WP Saha',
@@ -1831,12 +1827,12 @@ GT_vs_MI = [
 
 KKR_vs_RCB = [
     {
-        'match_number': 35,
+        'Match Number': 36,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-04-26'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1845,8 +1841,8 @@ KKR_vs_RCB = [
                 'winner': 'Kolkata Knight Riders'
             },
             'overs': 20,
-            'player_of_match': ['CV Varun'],
-            'players': {
+            'POTM': ['CV Varun'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'Suyash Sharma',
                     'JJ Roy',
@@ -1882,12 +1878,12 @@ KKR_vs_RCB = [
 
 RR_vs_CSK = [
     {
-        'match_number': 36,
+        'Match Number': 37,
         'info': {
             'city': 'Jaipur',
             'competition': 'IPL',
             'dates': ['2023-04-27'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1896,8 +1892,8 @@ RR_vs_CSK = [
                 'winner': 'Rajasthan Royals'
             },
             'overs': 20,
-            'player_of_match': ['YBK Jaiswal'],
-            'players': {
+            'POTM': ['YBK Jaiswal'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'K Yadav',
                     'YBK Jaiswal',
@@ -1933,12 +1929,12 @@ RR_vs_CSK = [
 
 LSG_vs_PBKS = [
     {
-        'match_number': 37,
+        'Match Number': 38,
         'info': {
             'city': 'Chandigarh',
             'competition': 'IPL',
             'dates': ['2023-04-28'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1947,8 +1943,8 @@ LSG_vs_PBKS = [
                 'winner': 'Lucknow Super Giants'
             },
             'overs': 20,
-            'player_of_match': ['MP Stoinis'],
-            'players': {
+            'POTM': ['MP Stoinis'],
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'A Mishra',
                     'KL Rahul',
@@ -1984,12 +1980,12 @@ LSG_vs_PBKS = [
 
 KKR_vs_GT = [
     {
-        'match_number': 38,
+        'Match Number': 39,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-04-29'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -1998,8 +1994,8 @@ KKR_vs_GT = [
                 'winner': 'Gujarat Titans'
             },
             'overs': 20,
-            'player_of_match': ['J Little'],
-            'players': {
+            'POTM': ['J Little'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'Suyash Sharma',
                     'N Jagadeesan',
@@ -2035,12 +2031,12 @@ KKR_vs_GT = [
 
 DC_vs_SRH = [
     {
-        'match_number': 39,
+        'Match Number': 40,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-04-29'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -2049,8 +2045,8 @@ DC_vs_SRH = [
                 'winner': 'Sunrisers Hyderabad'
             },
             'overs': 20,
-            'player_of_match': ['MR Marsh'],
-            'players': {
+            'POTM': ['MR Marsh'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'T Natarajan',
                     'Abhishek Sharma',
@@ -2086,12 +2082,12 @@ DC_vs_SRH = [
 
 CSK_vs_PBKS = [
     {
-        'match_number': 40,
+        'Match Number': 41,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-04-30'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -2100,8 +2096,8 @@ CSK_vs_PBKS = [
                 'winner': 'Punjab Kings'
             },
             'overs': 20,
-            'player_of_match': ['DP Conway'],
-            'players': {
+            'POTM': ['DP Conway'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'Akash Singh',
                     'RD Gaikwad',
@@ -2137,12 +2133,12 @@ CSK_vs_PBKS = [
 
 RR_vs_MI = [
     {
-        'match_number': 41,
+        'Match Number': 42,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-04-30'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -2151,8 +2147,8 @@ RR_vs_MI = [
                 'winner': 'Mumbai Indians'
             },
             'overs': 20,
-            'player_of_match': ['YBK Jaiswal'],
-            'players': {
+            'POTM': ['YBK Jaiswal'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'KR Sen',
                     'YBK Jaiswal',
@@ -2187,12 +2183,12 @@ RR_vs_MI = [
 
 RCB_vs_LSG = [
     {
-        'match_number': 42,
+        'Match Number': 43,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-05-01'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -2201,8 +2197,8 @@ RCB_vs_LSG = [
                 'winner': 'Royal Challengers Bangalore'
             },
             'overs': 20,
-            'player_of_match': ['F du Plessis'],
-            'players': {
+            'POTM': ['F du Plessis'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'V Kohli',
                     'F du Plessis',
@@ -2238,12 +2234,12 @@ RCB_vs_LSG = [
 
 DC_vs_GT = [
     {
-        'match_number': 43,
+        'Match Number': 44,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-05-02'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'by': {
@@ -2252,8 +2248,8 @@ DC_vs_GT = [
                 'winner': 'Delhi Capitals'
             },
             'overs': 20,
-            'player_of_match': ['Mohammed Shami'],
-            'players': {
+            'POTM': ['Mohammed Shami'],
+            'Playing XIs': {
                 'Delhi Capitals': [
                     'KK Ahmed',
                     'PD Salt',
@@ -2289,18 +2285,18 @@ DC_vs_GT = [
 
 LSG_vs_CSK = [
     {
-        'match_number': 44,
+        'Match Number': 45,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-05-03'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'result': 'no result'
             },
             'overs': 20,
-            'players': {
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'M Vohra',
                     'KR Mayers',
@@ -2335,12 +2331,12 @@ LSG_vs_CSK = [
 
 PBKS_vs_MI = [
     {
-        'match_number': 45,
+        'Match Number': 46,
         'info': {
             'city': 'Chandigarh',
             'competition': 'IPL',
             'dates': ['2023-05-03'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Mumbai Indians',
@@ -2349,8 +2345,8 @@ PBKS_vs_MI = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Ishan Kishan'],
-            'players': {
+            'POTM': ['Ishan Kishan'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'NT Ellis',
                     'P Simran Singh',
@@ -2386,12 +2382,12 @@ PBKS_vs_MI = [
 
 SRH_vs_KKR = [
     {
-        'match_number': 46,
+        'Match Number': 47,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-05-04'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Kolkata Knight Riders',
@@ -2400,8 +2396,8 @@ SRH_vs_KKR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['CV Varun'],
-            'players': {
+            'POTM': ['CV Varun'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'JJ Roy',
                     'Rahmanullah Gurbaz',
@@ -2437,12 +2433,12 @@ SRH_vs_KKR = [
 
 RR_vs_GT = [
     {
-        'match_number': 47,
+        'Match Number': 48,
         'info': {
             'city': 'Jaipur',
             'competition': 'IPL',
             'dates': ['2023-05-05'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Gujarat Titans',
@@ -2451,8 +2447,8 @@ RR_vs_GT = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Rashid Khan'],
-            'players': {
+            'POTM': ['Rashid Khan'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'YBK Jaiswal',
                     'JC Buttler',
@@ -2488,12 +2484,12 @@ RR_vs_GT = [
 
 MI_vs_CSK = [
     {
-        'match_number': 48,
+        'Match Number': 49,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-05-06'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Chennai Super Kings',
@@ -2502,8 +2498,8 @@ MI_vs_CSK = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['M Pathirana'],
-            'players': {
+            'POTM': ['M Pathirana'],
+            'Playing XIs': {
                 'Mumbai Indians': [
                     'R Goyal',
                     'C Green',
@@ -2539,12 +2535,12 @@ MI_vs_CSK = [
 
 RCB_vs_DC = [
     {
-        'match_number': 49,
+        'Match Number': 50,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-05-06'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Delhi Capitals',
@@ -2553,8 +2549,8 @@ RCB_vs_DC = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['PD Salt'],
-            'players': {
+            'POTM': ['PD Salt'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'HV Patel',
                     'V Kohli',
@@ -2590,12 +2586,12 @@ RCB_vs_DC = [
 
 GT_vs_LSG = [
     {
-        'match_number': 50,
+        'Match Number': 51,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-05-07'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Gujarat Titans',
@@ -2604,8 +2600,8 @@ GT_vs_LSG = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Shubman Gill'],
-            'players': {
+            'POTM': ['Shubman Gill'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'AS Joseph',
                     'WP Saha',
@@ -2641,12 +2637,12 @@ GT_vs_LSG = [
 
 RR_vs_SRH = [
     {
-        'match_number': 51,
+        'Match Number': 52,
         'info': {
             'city': 'Jaipur',
             'competition': 'IPL',
             'dates': ['2023-05-07'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Sunrisers Hyderabad',
@@ -2655,8 +2651,8 @@ RR_vs_SRH = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['GD Phillips'],
-            'players': {
+            'POTM': ['GD Phillips'],
+            'Playing XIs': {
                 'Rajasthan Royals': [
                     'OC McCoy',
                     'YBK Jaiswal',
@@ -2693,12 +2689,12 @@ RR_vs_SRH = [
 
 PBKS_vs_KKR = [
     {
-        'match_number': 52,
+        'Match Number': 53,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-05-08'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Kolkata Knight Riders',
@@ -2707,8 +2703,8 @@ PBKS_vs_KKR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['AD Russell'],
-            'players': {
+            'POTM': ['AD Russell'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'NT Ellis',
                     'P Simran Singh',
@@ -2744,12 +2740,12 @@ PBKS_vs_KKR = [
 
 RCB_vs_MI = [
     {
-        'match_number': 53,
+        'Match Number': 54,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-05-09'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Mumbai Indians',
@@ -2758,8 +2754,8 @@ RCB_vs_MI = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['SA Yadav'],
-            'players': {
+            'POTM': ['SA Yadav'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'V Kohli',
                     'F du Plessis',
@@ -2795,12 +2791,12 @@ RCB_vs_MI = [
 
 CSK_vs_DC = [
     {
-        'match_number': 54,
+        'Match Number': 55,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-05-10'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Chennai Super Kings',
@@ -2809,8 +2805,8 @@ CSK_vs_DC = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['RA Jadeja'],
-            'players': {
+            'POTM': ['RA Jadeja'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'M Pathirana',
                     'RD Gaikwad',
@@ -2846,12 +2842,12 @@ CSK_vs_DC = [
 
 KKR_vs_RR = [
     {
-        'match_number': 55,
+        'Match Number': 56,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-05-11'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Rajasthan Royals',
@@ -2860,8 +2856,8 @@ KKR_vs_RR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['YBK Jaiswal'],
-            'players': {
+            'POTM': ['YBK Jaiswal'],
+            'Playing XIs': {
                 'Kolkata Knight Riders': [
                     'Suyash Sharma',
                     'JJ Roy',
@@ -2896,12 +2892,12 @@ KKR_vs_RR = [
 
 MI_vs_GT = [
     {
-        'match_number': 56,
+        'Match Number': 57,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-05-12'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Mumbai Indians',
@@ -2910,8 +2906,8 @@ MI_vs_GT = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['SA Yadav'],
-            'players': {
+            'POTM': ['SA Yadav'],
+            'Playing XIs': {
                 'Mumbai Indians': [
                     'Akash Madhwal',
                     'Ishan Kishan',
@@ -2947,12 +2943,12 @@ MI_vs_GT = [
 
 SRH_vs_LSG = [
     {
-        'match_number': 57,
+        'Match Number': 58,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-05-13'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Lucknow Super Giants',
@@ -2961,8 +2957,8 @@ SRH_vs_LSG = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['PN Mankad'],
-            'players': {
+            'POTM': ['PN Mankad'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'Vivrant Sharma',
                     'Anmolpreet Singh',
@@ -2998,12 +2994,12 @@ SRH_vs_LSG = [
 
 DC_vs_PBKS = [
     {
-        'match_number': 58,
+        'Match Number': 59,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-05-13'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Punjab Kings',
@@ -3012,8 +3008,8 @@ DC_vs_PBKS = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['P Simran Singh'],
-            'players': {
+            'POTM': ['P Simran Singh'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'NT Ellis',
                     'P Simran Singh',
@@ -3049,12 +3045,12 @@ DC_vs_PBKS = [
 
 RCB_vs_RR = [
     {
-        'match_number': 59,
+        'Match Number': 60,
         'info': {
             'city': 'Jaipur',
             'competition': 'IPL',
             'dates': ['2023-05-14'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Royal Challengers Bangalore',
@@ -3063,8 +3059,8 @@ RCB_vs_RR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['WD Parnell'],
-            'players': {
+            'POTM': ['WD Parnell'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'Shahbaz Ahmed',
                     'V Kohli',
@@ -3100,12 +3096,12 @@ RCB_vs_RR = [
 
 CSK_vs_KKR = [
     {
-        'match_number': 60,
+        'Match Number': 61,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-05-14'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Kolkata Knight Riders',
@@ -3114,8 +3110,8 @@ CSK_vs_KKR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['RK Singh'],
-            'players': {
+            'POTM': ['RK Singh'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'M Pathirana',
                     'RD Gaikwad',
@@ -3151,12 +3147,12 @@ CSK_vs_KKR = [
 
 GT_vs_SRH = [
     {
-        'match_number': 61,
+        'Match Number': 62,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-05-15'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Gujarat Titans',
@@ -3165,8 +3161,8 @@ GT_vs_SRH = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Shubman Gill'],
-            'players': {
+            'POTM': ['Shubman Gill'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'Yash Dayal',
                     'WP Saha',
@@ -3202,12 +3198,12 @@ GT_vs_SRH = [
 
 LSG_vs_MI = [
     {
-        'match_number': 62,
+        'Match Number': 63,
         'info': {
             'city': 'Lucknow',
             'competition': 'IPL',
             'dates': ['2023-05-16'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Lucknow Super Giants',
@@ -3216,8 +3212,8 @@ LSG_vs_MI = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['MP Stoinis'],
-            'players': {
+            'POTM': ['MP Stoinis'],
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'Yash Thakur',
                     'DJ Hooda',
@@ -3253,12 +3249,12 @@ LSG_vs_MI = [
 
 DC_vs_PBKS = [
     {
-        'match_number': 63,
+        'Match Number': 64,
         'info': {
             'city': 'Dharamsala',
             'competition': 'IPL',
             'dates': ['2023-05-17'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Delhi Capitals',
@@ -3267,8 +3263,8 @@ DC_vs_PBKS = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['RR Rossouw'],
-            'players': {
+            'POTM': ['RR Rossouw'],
+            'Playing XIs': {
                 'Delhi Capitals': [
                     'Mukesh Kumar',
                     'DA Warner',
@@ -3304,12 +3300,12 @@ DC_vs_PBKS = [
 
 SRH_vs_RCB = [
     {
-        'match_number': 64,
+        'Match Number': 65,
         'info': {
             'city': 'Hyderabad',
             'competition': 'IPL',
             'dates': ['2023-05-18'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Royal Challengers Bangalore',
@@ -3318,8 +3314,8 @@ SRH_vs_RCB = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['V Kohli'],
-            'players': {
+            'POTM': ['V Kohli'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'T Natarajan',
                     'Abhishek Sharma',
@@ -3354,12 +3350,12 @@ SRH_vs_RCB = [
 
 PBKS_vs_RR = [
     {
-        'match_number': 65,
+        'Match Number': 66,
         'info': {
             'city': 'Dharamsala',
             'competition': 'IPL',
             'dates': ['2023-05-19'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Rajasthan Royals',
@@ -3368,8 +3364,8 @@ PBKS_vs_RR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['D Padikkal'],
-            'players': {
+            'POTM': ['D Padikkal'],
+            'Playing XIs': {
                 'Punjab Kings': [
                     'NT Ellis',
                     'P Simran Singh',
@@ -3405,12 +3401,12 @@ PBKS_vs_RR = [
 
 CSK_vs_DC = [
     {
-        'match_number': 66,
+        'Match Number': 67,
         'info': {
             'city': 'Delhi',
             'competition': 'IPL',
             'dates': ['2023-05-20'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Chennai Super Kings',
@@ -3419,8 +3415,8 @@ CSK_vs_DC = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['RD Gaikwad'],
-            'players': {
+            'POTM': ['RD Gaikwad'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'M Pathirana',
                     'RD Gaikwad',
@@ -3456,12 +3452,12 @@ CSK_vs_DC = [
 
 LSG_vs_KKR = [
     {
-        'match_number': 67,
+        'Match Number': 68,
         'info': {
             'city': 'Kolkata',
             'competition': 'IPL',
             'dates': ['2023-05-20'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Lucknow Super Giants',
@@ -3470,8 +3466,8 @@ LSG_vs_KKR = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['N Pooran'],
-            'players': {
+            'POTM': ['N Pooran'],
+            'Playing XIs': {
                 'Lucknow Super Giants': [
                     'Yash Thakur',
                     'KS Sharma',
@@ -3507,12 +3503,12 @@ LSG_vs_KKR = [
 
 SRH_vs_MI = [
     {
-        'match_number': 68,
+        'Match Number': 69,
         'info': {
             'city': 'Mumbai',
             'competition': 'IPL',
             'dates': ['2023-05-21'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Mumbai Indians',
@@ -3521,8 +3517,8 @@ SRH_vs_MI = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['C Green'],
-            'players': {
+            'POTM': ['C Green'],
+            'Playing XIs': {
                 'Sunrisers Hyderabad': [
                     'Kartik Tyagi',
                     'Vivrant Sharma',
@@ -3557,12 +3553,12 @@ SRH_vs_MI = [
 
 RCB_vs_GT = [
     {
-        'match_number': 68,
+        'Match Number': 70,
         'info': {
             'city': 'Bengaluru',
             'competition': 'IPL',
             'dates': ['2023-05-21'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Gujarat Titans',
@@ -3571,8 +3567,8 @@ RCB_vs_GT = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Shubman Gill'],
-            'players': {
+            'POTM': ['Shubman Gill'],
+            'Playing XIs': {
                 'Royal Challengers Bangalore': [
                     'H Sharma',
                     'V Kohli',
@@ -3608,12 +3604,12 @@ RCB_vs_GT = [
 
 CSK_vs_GT = [
     {
-        'match_number': 69,
+        'Match Number': 71,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-05-23'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Chennai Super Kings',
@@ -3622,8 +3618,8 @@ CSK_vs_GT = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['RD Gaikwad'],
-            'players': {
+            'POTM': ['RD Gaikwad'],
+            'Playing XIs': {
                 'Chennai Super Kings': [
                     'M Pathirana',
                     'RD Gaikwad',
@@ -3659,12 +3655,12 @@ CSK_vs_GT = [
 
 MI_vs_LSG = [
     {
-        'match_number': 70,
+        'Match Number': 72,
         'info': {
             'city': 'Chennai',
             'competition': 'IPL',
             'dates': ['2023-05-24'],
-            'gender': 'male',
+
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Mumbai Indians',
@@ -3673,8 +3669,8 @@ MI_vs_LSG = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Akash Madhwal'],
-            'players': {
+            'POTM': ['Akash Madhwal'],
+            'Playing XIs': {
                 'Mumbai Indians': [
                     'Ishan Kishan',
                     'RG Sharma',
@@ -3710,12 +3706,11 @@ MI_vs_LSG = [
 
 GT_vs_MI = [
     {
-        'match_number': 71,
+        'Match Number': 73,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
             'dates': ['2023-05-26'],
-            'gender': 'male',
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Gujarat Titans',
@@ -3724,8 +3719,8 @@ GT_vs_MI = [
                 }
             },
             'overs': 20,
-            'player_of_match': ['Shubman Gill'],
-            'players': {
+            'POTM': ['Shubman Gill'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'J Little',
                     'WP Saha',
@@ -3762,12 +3757,11 @@ GT_vs_MI = [
 
 CSK_vs_GT = [
     {
-        'match_number': 72,
+        'Match Number': 74,
         'info': {
             'city': 'Ahmedabad',
             'competition': 'IPL',
-            'dates': ['2023-05-29'],
-            'gender': 'male',
+            'dates': '2023-05-29',
             'match_type': 'T20',
             'outcome': {
                 'winner': 'Chennai Super Kings',
@@ -3777,8 +3771,8 @@ CSK_vs_GT = [
                 'method': 'D/L'
             },
             'overs': 20,
-            'player_of_match': ['DP Conway'],
-            'players': {
+            'POTM': ['DP Conway'],
+            'Playing XIs': {
                 'Gujarat Titans': [
                     'WP Saha',
                     'Shubman Gill',
