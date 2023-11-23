@@ -9,20 +9,25 @@ CricVault is Python program started in 2023, from the collaborative efforts of *
 
 ## Getting Started 
 Getting cricVault up an running is a breeze. Follow the step listed bellow:
-1. First download the matchDatabase.py and main.py files from above.
-    - make sure these file are in same directory (folder), if not program will not work
-    
-2. open the main.py file an IDE of your chosie
-   
+1. **Download Files:**
+   - Download the [`matchDatabase.py`](https://github.com/JasroopSingh/CricVault/blob/main/matchDatabase.py) and [`main.py`](https://github.com/JasroopSingh/CricVault/blob/main/main.py) files from the provided links.
+   - Ensure both files are in the same directory (folder). CricVault won't function correctly otherwise.
 
+2. **Open `main.py`:**
+   - Open the `main.py` file in your preferred IDE or CLI environment.
+
+3. **Check Python Installation:**
+   - Ensure that you have Python installed in your IDE or on your operating system.
+
+4. **Run the Program:**
+   - If using an IDE, simply press the play button (ussalyy somewhere on top bar).
+   - If using CMD, run the command: `python <filePath>`.
+
+That's it! You're now ready to explore the world of cricket with CricVault. Now just from the list of matches provided input the team names and match number, to display the info.
 
 ## Contribution Guidelines
 
 We welcome contributions! If you have ideas for improvement or want to fix a bug, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
