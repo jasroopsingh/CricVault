@@ -442,7 +442,7 @@ PBKSvsRR = [
 ]
 RRvsPBKS = PBKSvsRR 
 
-
+#Match 9 - KKR vs RCB
 KKRvsRCB = [
     {
         'Match Number': 9,
@@ -495,6 +495,7 @@ KKRvsRCB = [
 ]
 RCBvsKKR = KKRvsRCB
 
+#Match 10 - SRH vs LSG
 SRHvsLSG = [
     {
         'Match Number': 10,
@@ -547,6 +548,7 @@ SRHvsLSG = [
 ]
 LSGvsSRH = SRHvsLSG
 
+#Match 11 - RR vs DC 
 RRvsDC = [
     {
         'Match Number': 11,
@@ -599,6 +601,7 @@ RRvsDC = [
 ]
 DCvsRR = RRvsDC
 
+#Match 12 - MI vs CSK  
 MIvsCSK = [
     {
         'Match Number': 12,
@@ -651,6 +654,7 @@ MIvsCSK = [
 ]
 CSKvsMI = MIvsCSK
 
+#Match 13 - GT vs KKR
 GTvsKKR = [
     {
         'Match Number': 13,
@@ -703,6 +707,7 @@ GTvsKKR = [
 ]
 KKRvsGT = GTvsKKR
 
+#Match 14 - PBKS vs SRH   
 PBKSvsSRH = [
     {
         'Match Number': 14,
@@ -754,6 +759,7 @@ PBKSvsSRH = [
 ]
 SRHvsPBKS = PBKSvsSRH
 
+#Match 15 - RCB vs LSG 
 RCBvsLSG = [
     {
         'Match Number': 15,
@@ -806,6 +812,7 @@ RCBvsLSG = [
 ]
 LSGvsRCB = RCBvsLSG
 
+#Match 16 - DC vs MI 
 DCvsMI = [
     {
         'Match Number': 16,
@@ -858,6 +865,7 @@ DCvsMI = [
 ]
 MIvsDC = DCvsMI
 
+#Match 17 - RR vs CSK  
 RRvsCSK = [
     {
         'Match Number': 17,
@@ -910,6 +918,7 @@ RRvsCSK = [
 ]
 CSKvsRR = RRvsCSK
 
+#Match 18 - PBKSvsGT
 PBKSvsGT = [
     {
         'Match Number': 18,
@@ -961,6 +970,7 @@ PBKSvsGT = [
 ]
 GTvsPBKS = PBKSvsGT
 
+#Match 19 - KKR vs SRH  
 KKRvsSRH = [
     {
         'Match Number': 19,
@@ -1013,6 +1023,7 @@ KKRvsSRH = [
 ]
 SRHvsKKR = KKRvsSRH
 
+#Match 20 - RCB vs DC
 RCBvsDC = [
     {
         'Match Number': 20,
@@ -1065,6 +1076,7 @@ RCBvsDC = [
 ]
 DCvsRCB = RCBvsDC
 
+#Match 21 - LSG vs PBKS
 LSGvsPBKS = [
     {
         'Match Number': 21,
@@ -1117,6 +1129,7 @@ LSGvsPBKS = [
 ]
 PBKSvsLSG = LSGvsPBKS
 
+#Match 22 - KKR vs MI 
 KKRvsMI = [
     {
         'Match Number': 22,
@@ -1169,6 +1182,7 @@ KKRvsMI = [
 ]
 MIvsKKR = KKRvsMI
 
+#Match 23 - GT vs RR
 GTvsRR = [
     {
         'Match Number': 23,
@@ -1221,6 +1235,7 @@ GTvsRR = [
 ]
 RRvsGT = GTvsRR
 
+#Match 24 - CSK vs RCB
 CSKvsRCB = [
     {
         'Match Number': 24,
@@ -1273,6 +1288,7 @@ CSKvsRCB = [
 ]
 RCBvsCSK = CSKvsRCB
 
+#Match 25 - MI vs SRH  
 MIvsSRH = [
     {
         'Match Number': 25,
@@ -1325,6 +1341,7 @@ MIvsSRH = [
 ]
 SRHvsMI = MIvsSRH
 
+#Match 26 - LSG vs RR 
 LSGvsRR = [
     {
         'Match Number': 26,
@@ -1377,6 +1394,7 @@ LSGvsRR = [
 ]
 RRvsLSG = LSGvsRR
 
+#Match 27 - RCB vs PBKS
 RCBvsPBKS = [
     {
         'Match Number': 27,
@@ -1429,6 +1447,7 @@ RCBvsPBKS = [
 ]
 PBKSvsRCB = RCBvsPBKS
 
+#Match 28 - KKR vs DC 
 KKRvsDC = [
     {
         'Match Number': 28,
@@ -1481,6 +1500,7 @@ KKRvsDC = [
 ]
 DCvsKKR = KKRvsDC
 
+#Match 29 - SRH vs CSK 
 SRHvsCSK = [
     {
         'Match Number': 29,
@@ -1533,6 +1553,7 @@ SRHvsCSK = [
 ]
 CSKvsSRH = SRHvsCSK
 
+#Match 30 - GT vs LSG 
 GTvsLSG = [
     {
         'Match Number': 30,
@@ -1585,6 +1606,7 @@ GTvsLSG = [
 ]
 LSGvsGT = GTvsLSG
 
+#Match 31 - PBKS vs MI
 PBKSvsMI = [
     {
         'Match Number': 31,
@@ -1637,6 +1659,7 @@ PBKSvsMI = [
 ]
 MIvsPBKS = PBKSvsMI
 
+#Match 32 - RCB vs RR
 RCBvsRR = [
     {
         'Match Number': 32,
@@ -1689,6 +1712,7 @@ RCBvsRR = [
 ]
 RRvsRCB = RCBvsRR
 
+#Match 33 - CSK vs KKR  
 CSKvsKKR = [
     {
         'Match Number': 33,
@@ -1741,6 +1765,7 @@ CSKvsKKR = [
 ]
 KKRvsCSK = CSKvsKKR
 
+#Match 34 - DC vs SRH
 DCvsSRH = [
     {
         'Match Number': 34,
@@ -1793,6 +1818,7 @@ DCvsSRH = [
 ]
 SRHvsDC = DCvsSRH
 
+#Match 35 - GT vs MI 
 GTvsMI = [
     {
         'Match Number': 35,
@@ -1845,6 +1871,7 @@ GTvsMI = [
 ]
 MIvsGT = GTvsMI
 
+#Match 36 - KKR vs RCB2
 KKRvsRCB2 = [
     {
         'Match Number': 36,
@@ -3865,5 +3892,8 @@ GTvsCSK3 = CSKvsGT3
 # ╚══════════════ End of Lists ═══════════════╝ #
 
 # ╚═══════════════════════════════ End of Code ═════════════════════════════════╝ #
+
+
+
 
 
