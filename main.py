@@ -1,33 +1,6 @@
-#check userMatch input for vaild input
-def getValidMatch():
-    isValidMatch = False
-    while isValidMatch == False:
-        userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
-    #remove spaces at start and end
-        userMatch = userMatch.strip()
-    #check length of string and if it is alphabetical
-        if userMatch.isalnum() == True:
-            isValidGuess = True
-            return userMatch
-        else: 
-            print("Invalid Input!!! Please enter valid input (reffer to format given)")
+from matchDatabase import * #imports all things like funcation from matchDatabase file
 
-#check matchNum input for vaild input
-def getValidMatchNum():
-    isValidMatchNum = False
-    while isValidMatchNum == False:
-        matchNum = input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): ")
-
-        if matchNum.isdigit():
-            matchNum = int(matchNum)
-            if 0 < matchNum < 75:
-                isValidMatchNum = True
-                return matchNum
-            else:
-                print("Invalid input!!! Match number should be a between 1 - 74.")
-        else: 
-            print("Invalid input!!! Please input a number.")
-
+#Logo ASCII art print
 print('''
 
                     ,gN&&&&&╣&&g,,
@@ -58,6 +31,8 @@ print('''
                
                 Maintained by Jasroop & Pawit Singh
 ''')
+
+#List of Matches Corresponding to match numbers
 print("""
 \033[1mGroup Stage\033[2m                                                                                                    
 Match 1 - GTvsCSK         Match 19 - KKRvsSRH        Match 37 - RRvsCSK2         Match 55 - CSKvsDC          
@@ -87,46 +62,87 @@ Match 74 - CSKvsGT3
 \033[0m
 """)
 
-from matchDatabase import * #imports all things like funcation from matchDatabase file
+# ╔═══════════════════════════════ start ═════════════════════════════╗
+#                            CHECK USER INPUT
+# ╚═══════════════════════════════ start ═════════════════════════════╝
+#check userMatch input for vaild input
+def getValidMatch():
+    isValidMatch = False
+    while isValidMatch == False:
+        userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
+    #remove spaces at start and end
+        userMatch = userMatch.strip()
+    #check length of string and if it is alphabetical
+        if userMatch.isalnum() == True:
+            isValidGuess = True
+            return userMatch
+        else: 
+            print("Invalid Input!!! Please enter valid input (reffer to format given)")
 
-#Ask User for input?
+#check matchNum input for vaild input
+def getValidMatchNum():
+    isValidMatchNum = False
+    while isValidMatchNum == False:
+        matchNum = input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): ")
+
+        if matchNum.isdigit():
+            matchNum = int(matchNum)
+            if 0 < matchNum < 75:
+                isValidMatchNum = True
+                return matchNum
+            else:
+                print("Invalid input!!! Match number should be a between 1 - 74.")
+        else: 
+            print("Invalid input!!! Please input a number.")
+# ╔═══════════════════════════════ end ═════════════════════════════╗
+#                            CHECK USER INPUT
+# ╚═══════════════════════════════ end ═════════════════════════════╝
+
+#Ask user for input
 print("\033[3m----- Please input Match for which you want to display info for. Make sure to follow propper formating!! -----\033[0m")
 print()
-userMatch = getValidMatch()
+userMatch = getValidMatch() #Ask 
 matchNum = getValidMatchNum()
 print()
 
-match_info = getMatch(userMatch, matchNum)
-
-# Print the match information
-if match_info:
-    print(f"\033[1mMatch Information for Match Number {match_info['Match Number']}\033[0m")
-    print()
-    print(f"City: {match_info['info']['city']}")
-    print(f"Competition: {match_info['info']['competition']}")
-    print(f"Dates: {match_info['info']['dates']}")
-    print(f"Match Type: {match_info['info']['match_type']}")
-
-    outcome = match_info['info']['outcome']
+while True:
+    match_info = getMatch(userMatch, matchNum) #
     
-    if 'by' in outcome:
-        if 'wickets' in outcome['by']:
-            print(f"Outcome: {outcome['winner']} won by {outcome['by']['wickets']} wickets")
-        elif 'runs' in outcome['by']:
-            print(f"Outcome: {outcome['winner']} won by {outcome['by']['runs']} runs")
-        elif 'method' in outcome['by']:
-            print(f"Outcome: {outcome['winner']} won by {outcome['by']['method']} wickets (D/L method)")
-        elif 'method' in outcome['by']:
-            print(f"Outcome: {outcome['winner']} won by {outcome['by']['method']} runs (D/L method)")
+    # Print the match information, print match not found if match not in database
+    if match_info:
+        print(f"\033[1mMatch Information for Match Number {match_info['Match Number']}\033[0m")
+        print()
+        print(f"City: {match_info['info']['city']}")
+        print(f"Competition: {match_info['info']['competition']}")
+        print(f"Dates: {match_info['info']['dates']}")
+        print(f"Match Type: {match_info['info']['match_type']}")
+    
+        outcome = match_info['info']['outcome']
+        
+        if 'by' in outcome:
+            if 'wickets' in outcome['by']:
+                print(f"Outcome: {outcome['winner']} won by {outcome['by']['wickets']} wickets")
+            elif 'runs' in outcome['by']:
+                print(f"Outcome: {outcome['winner']} won by {outcome['by']['runs']} runs")
+            elif 'method' in outcome['by']:
+                print(f"Outcome: {outcome['winner']} won by {outcome['by']['method']} wickets (D/L method)")
+            elif 'method' in outcome['by']:
+                print(f"Outcome: {outcome['winner']} won by {outcome['by']['method']} runs (D/L method)")
+        else:
+            print(f"Outcome: {outcome['winner']}")
+    
+        print(f"Overs: {match_info['info']['overs']}")
+        print(f"POTM: {match_info['info']['POTM']}")
+        print("Playing XIs:")
+        for team, players in match_info['info']['Playing XIs'].items():
+            print(f"{team}:")
+            for player in players:
+                print(f"- {player}")
+        break
     else:
-        print(f"Outcome: {outcome['winner']}")
-
-    print(f"Overs: {match_info['info']['overs']}")
-    print(f"POTM: {match_info['info']['POTM']}")
-    print("Playing XIs:")
-    for team, players in match_info['info']['Playing XIs'].items():
-        print(f"{team}:")
-        for player in players:
-            print(f"- {player}")
-else:
-    print("Match not found.")
+        print("Match not found. Double check your input!! Make sure the you check the list provide")
+        user_input = input("Enter another match number or type 'exit' to quit: ")
+        if user_input.lower() == 'exit':
+            break  # Exit the loop if the user wants to quit
+    
+    
