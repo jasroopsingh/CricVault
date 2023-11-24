@@ -70,14 +70,15 @@ def getValidMatch():
     isValidMatch = False
     while isValidMatch == False:
         userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
-    #remove spaces at start and end
+        # Remove spaces at the start and end
         userMatch = userMatch.strip()
-    #check length of string and if it is alphabetical
-        if userMatch.isalnum() == True:
-            isValidGuess = True
+        # Check if the user input
+        if userMatch.isalnum():
+            isValidMatch = True
             return userMatch
-        else: 
-            print("Invalid Input!!! Please enter valid input (reffer to format given)")
+        else:
+            print("Invalid Input!!! Please enter valid input (refer to the format given). Also make sure you have the names of the team right (Reffer to table above for matches with their match number.)")
+    
 
 #check matchNum input for vaild input
 def getValidMatchNum():
@@ -101,8 +102,8 @@ def getValidMatchNum():
 #Ask user for input
 print("\033[3m----- Please input Match for which you want to display info for. Make sure to follow propper formating!! -----\033[0m")
 print()
-userMatch = getValidMatch() #Ask 
-matchNum = getValidMatchNum()
+userMatch = getValidMatch() #Ask & Check user input for valid input
+matchNum = getValidMatchNum() #Ask & Check user input for valid input
 print()
 
 while True:
@@ -140,9 +141,16 @@ while True:
                 print(f"- {player}")
         break
     else:
-        print("Match not found. Double check your input!! Make sure the you check the list provide")
-        user_input = input("Enter another match number or type 'exit' to quit: ")
+        print("The match was not found. Double-check your input to see if you have the correct match name and match number! Refer to the match table provided above to find the matching match number for the match.")
+        user_input = input("Press 'enter' key  to retry or type 'exit' to quit: ")
         if user_input.lower() == 'exit':
             break  # Exit the loop if the user wants to quit
+        else: 
+            userMatch = getValidMatch() #Ask & Check user input for valid input
+            matchNum = getValidMatchNum() #Ask & Check user input for valid input
     
     
+
+
+
+
