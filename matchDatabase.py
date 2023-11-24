@@ -8,7 +8,7 @@
 
 # ╔═════════════════════════════ Beginning of Code ════════════════════════════╗ #
 
-def get_match_info(iplMatch, matchNumber):
+def getMatch(iplMatch, matchNumber):
     #used to 
     matchDatabase = globals().get(iplMatch) #.get resource - https://www.w3schools.com/python/ref_dictionary_get.asp #globals() resource - 
     #Go through the list matches to find the match with the specified match number
