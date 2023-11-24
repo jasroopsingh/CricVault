@@ -67,15 +67,17 @@ def getValidGuess():
     # this is what I have right now
     isValidGuess = False
     while isValidGuess == False:
-        userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1): ")
+        userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
+        print("Invalid Input!!! Please enter valid input (reffer to format given)")
+        
 #remove spaces at start and end and make lowercase
         userMatch = userMatch.strip()
 #check length of string and if it is alphabetical
-        if len(userMatch) == 1 and userMatch.isalpha() == True:
+        if userMatch.isalpha() == True:
             isValidGuess = True
     return userMatch
 
-userMatch = getVaildGuess()
+userMatch = getValidGuess()
 matchNum = int(input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): "))
 print()
 
