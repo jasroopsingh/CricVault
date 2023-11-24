@@ -3,7 +3,7 @@ from matchDatabase import * #imports all things like funcation from matchDatabas
 #Logo ASCII art print
 print('''
 
-                    ,gN&&&&&╣&&g,,
+                   ,,gN&&&&&╣&&g,,
                 ╓φ&Å╨""`""╙╩""&   &
              ,¢╩`              |   |
            ╓╜                   |   |
@@ -107,18 +107,18 @@ matchNum = getValidMatchNum() #Ask & Check user input for valid input
 print()
 
 while True:
-    match_info = getMatch(userMatch, matchNum) #
+    matchInfo = getMatch(userMatch, matchNum) #
     
     # Print the match information, print match not found if match not in database
-    if match_info:
-        print(f"\033[1mMatch Information for Match Number {match_info['Match Number']}\033[0m")
+    if matchInfo:
+        print(f"\033[1mMatch Information for Match Number {matchInfo['Match Number']}\033[0m")
         print()
-        print(f"City: {match_info['info']['city']}")
-        print(f"Competition: {match_info['info']['competition']}")
-        print(f"Dates: {match_info['info']['dates']}")
-        print(f"Match Type: {match_info['info']['match_type']}")
+        print(f"City: {matchInfo['info']['city']}")
+        print(f"Competition: {matchInfo['info']['competition']}")
+        print(f"Dates: {matchInfo['info']['dates']}")
+        print(f"Match Type: {matchInfo['info']['match_type']}")
     
-        outcome = match_info['info']['outcome']
+        outcome = matchInfo['info']['outcome']
         
         if 'by' in outcome:
             if 'wickets' in outcome['by']:
@@ -132,10 +132,10 @@ while True:
         else:
             print(f"Outcome: {outcome['winner']}")
     
-        print(f"Overs: {match_info['info']['overs']}")
-        print(f"POTM: {match_info['info']['POTM']}")
+        print(f"Overs: {matchInfo['info']['overs']}")
+        print(f"POTM: {matchInfo['info']['POTM']}")
         print("Playing XIs:")
-        for team, players in match_info['info']['Playing XIs'].items():
+        for team, players in matchInfo['info']['Playing XIs'].items():
             print(f"{team}:")
             for player in players:
                 print(f"- {player}")
