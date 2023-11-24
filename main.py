@@ -72,10 +72,11 @@ def getValidMatch():
         userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
         # Remove spaces at the start and end
         userMatch = userMatch.strip()
-        # Check if the user input
-        if userMatch.isalnum():
+         # Check if the user input in alphabet and can be number and if input contains 'vs' if it does userMatch=ture
+        if userMatch.isalnum() and 'vs' in userMatch:
             isValidMatch = True
             return userMatch
+         #if userMatch not match above requirements then this else runs, tell user Invaild input and asking to vaild input again
         else:
             print("Invalid Input!!! Please enter valid input (refer to the format given). Also make sure you have the names of the team right (Reffer to table above for matches with their match number.)")
     
@@ -86,13 +87,15 @@ def getValidMatchNum():
     while isValidMatchNum == False:
         matchNum = input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): ")
 
-        if matchNum.isdigit():
-            matchNum = int(matchNum)
+        if matchNum.isdigit(): #matchNum must be number
+            matchNum = int(matchNum)#telling that matchNum is an int
+            #if user input between 1 - 74 then quals valid match number
             if 0 < matchNum < 75:
                 isValidMatchNum = True
                 return matchNum
             else:
                 print("Invalid input!!! Match number should be a between 1 - 74.")
+         #if user input is not number this tells that
         else: 
             print("Invalid input!!! Please input a number.")
 # ╔═══════════════════════════════ end ═════════════════════════════╗
@@ -141,10 +144,12 @@ while True:
                 print(f"- {player}")
         break
     else:
+        #if match not found becuase of wrong input in match number then tells that
         print("The match was not found. Double-check your input to see if you have the correct match name and match number! Refer to the match table provided above to find the matching match number for the match.")
-        user_input = input("Press 'enter' key  to retry or type 'exit' to quit: ")
+        user_input = input("Press 'enter' key  to retry or type 'exit' to quit: ") #asks user if they want to try input again enter = try again and exit string = program exit
         if user_input.lower() == 'exit':
             break  # Exit the loop if the user wants to quit
+        #re-promts user for input
         else: 
             userMatch = getValidMatch() #Ask & Check user input for valid input
             matchNum = getValidMatchNum() #Ask & Check user input for valid input
