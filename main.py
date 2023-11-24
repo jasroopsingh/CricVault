@@ -1,21 +1,30 @@
-def getValidMatchInput():
-    # this is what I have right now
-    isValidGuess = False
-    while isValidGuess == False:
+def getValidMatch():
+    isValidMatch = False
+    while isValidMatch == False:
         userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
-        print("Invalid Input!!! Please enter valid input (reffer to format given)")
     #remove spaces at start and end and make lowercase
         userMatch = userMatch.strip()
     #check length of string and if it is alphabetical
         if userMatch.isalpha() == True:
             isValidGuess = True
-    return userMatch
+            return userMatch
+        else: 
+            print("Invalid Input!!! Please enter valid input (reffer to format given)")
+def getValidMatchNum():
+    isValidMatchNum = False
+    while isValidMatchNum == False:
+        matchNum = int(input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): "))
 
+        if 0 < matchNum < 75:
+            isValidMatchNum = True
+            return matchNum
+        else:
+            print("Invalid input!!! Match number should be a between 1 - 74.")
 
 print('''
 
-                    ,gN&&&&&╣&&g,
-                ╓φ&Å╨""`""╙╩&    &
+                    ,gN&&&&&╣&&g,,
+                ╓φ&Å╨""`""╙╩""&   &
              ,¢╩`              |   |
            ╓╜                   |   |
     ▄▄▄▄▄▄▄▄▄████████▄▄ ▄        |   |
@@ -44,30 +53,30 @@ print('''
 ''')
 print("""
 \033[1mGroup Stage\033[2m                                                                                                    
-Match 1 - GT vs CSK         Match 19 - KKR vs SRH       Match 37 - RR vs CSK         Match 55 - CSK vs DC          
-Match 2 - PBKS vs KKR       Match 20 - RCB vs DC        Match 38 - LSG vs PBKS       Match 56 - KKR vs RR           
-Match 3 - LSG vs DC         Match 21 - LSG vs PBKS      Match 39 - KKR vs GT         Match 57 - MI vs GT            
-Match 4 - RR vs SRH         Match 22 - KKR vs MI        Match 40 - DC vs SRH         Match 58 - SRH vs LSG          
-Match 5 - MI vs RCB         Match 23 - GT vs RR         Match 41 - CSK vs PBKS       Match 59 - DC vs PBKS
-Match 6 - CSK vs LSG        Match 24 - CSK vs RCB       Match 42 - RR vs MI          Match 60 - RCB vs RR
-Match 7 - DC vs GT          Match 25 - MI vs SRH        Match 43 - RCB vs LSG        Match 61 - CSK vs KKR
-Match 8 - PBKS vs RR        Match 26 - LSG vs RR        Match 44 - DC vs GT          Match 62 - GT vs SRH
-Match 9 - KKR vs RCB        Match 27 - RCB vs PBKS      Match 45 - LSG vs CSK        Match 63 - LSG vs MI
-Match 10 - SRH vs LSG       Match 28 - KKR vs DC        Match 46 - PBKS vs MI        Match 64 - DC vs PBKS
-Match 11 - RR vs DC         Match 29 - SRH vs CSK       Match 47 - SRH vs KKR        Match 65 - SRH vs RCB
-Match 12 - MI vs CSK        Match 30 - GT vs LSG        Match 48 - RR vs GT          Match 66 - PBKS vs RR
-Match 13 - GT vs KKR        Match 31 - PBKS vs MI       Match 49 - MI vs CSK         Match 67 - CSK vs DC
-Match 14 - PBKS vs SRH      Match 32 - RCB vs RR        Match 50 - RCB vs DC         Match 68 - LSG vs KKR
-Match 15 - RCB vs LSG       Match 33 - CSK vs KKR       Match 51 - GT vs LSG         Match 69 - SRH vs MI
-Match 16 - DC vs MI         Match 34 - DC vs SRH        Match 52 - RR vs SRH         Match 70 - RCB vs GT
-Match 17 - RR vs CSK        Match 35 - GT vs MI         Match 53 - PBKS vs KKR         
-Match 18 - PBKS vs GT       Match 36 - KKR vs RCB       Match 54 - RCB vs MI       
+Match 1 - GTvsCSK         Match 19 - KKRvsSRH       Match 37 - RRvsCSK         Match 55 - CSKvsDC          
+Match 2 - PBKSvsKKR       Match 20 - RCBvsDC        Match 38 - LSGvsPBKS       Match 56 - KKRvsRR           
+Match 3 - LSGvsDC         Match 21 - LSGvsPBKS      Match 39 - KKRvsGT         Match 57 - MIvsGT            
+Match 4 - RRvsSRH         Match 22 - KKRvsMI        Match 40 - DCvsSRH         Match 58 - SRHvsLSG          
+Match 5 - MIvsRCB         Match 23 - GTvsRR         Match 41 - CSKvsPBKS       Match 59 - DCvsPBKS
+Match 6 - CSKvsLSG        Match 24 - CSKvsRCB       Match 42 - RRvsMI          Match 60 - RCBvsRR
+Match 7 - DCvsGT          Match 25 - MIvsSRH        Match 43 - RCBvsLSG        Match 61 - CSKvsKKR
+Match 8 - PBKSvsRR        Match 26 - LSGvsRR        Match 44 - DCvsGT          Match 62 - GTvsSRH
+Match 9 - KKRvsRCB        Match 27 - RCBvsPBKS      Match 45 - LSGvsCSK        Match 63 - LSGvsMI
+Match 10 - SRHvsLSG       Match 28 - KKRvsDC        Match 46 - PBKSvsMI        Match 64 - DCvsPBKS
+Match 11 - RRvsDC         Match 29 - SRHvsCSK       Match 47 - SRHvsKKR        Match 65 - SRHvsRCB
+Match 12 - MIvsCSK        Match 30 - GTvsLSG        Match 48 - RRvsGT          Match 66 - PBKSvsRR
+Match 13 - GTvsKKR        Match 31 - PBKSvsMI       Match 49 - MIvsCSK         Match 67 - CSKvsDC
+Match 14 - PBKSvsSRH      Match 32 - RCBvsRR        Match 50 - RCBvsDC         Match 68 - LSGvsKKR
+Match 15 - RCBvsLSG       Match 33 - CSKvsKKR       Match 51 - GTvsLSG         Match 69 - SRHvsMI
+Match 16 - DCvsMI         Match 34 - DCvsSRH        Match 52 - RRvsSRH         Match 70 - RCBvsGT
+Match 17 - RRvsCSK        Match 35 - GTvsMI         Match 53 - PBKSvsKKR         
+Match 18 - PBKSvsGT       Match 36 - KKRvsRCB       Match 54 - RCBvsMI       
 \033[0m
 \033[1mQualifiers/Final\033[2m
-Match 71 - CSK vs GT
-Match 72 - MI vs LSG
-Match 73 - GT vs MI
-Match 74 - CSK vs GT
+Match 71 - CSKvsGT
+Match 72 - MIvsLSG
+Match 73 - GTvsMI
+Match 74 - CSKvsGT
 \033[0m
 """)
 
@@ -75,8 +84,8 @@ from matchDatabase import * #imports all things like funcation from matchDatabas
 #Ask User for input - For what match do They want to display info for?
 print("\033[3m----- Please input Match for which you want to display info for -----\033[0m")
 print()
-userMatch = getValidMatchInput()
-matchNum = int(input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): "))
+userMatch = getValidMatch()
+matchNum = getValidMatchNum()
 print()
 
 match_info = getMatch(userMatch, matchNum)

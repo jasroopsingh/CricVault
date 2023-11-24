@@ -24,7 +24,7 @@ def getMatch(iplMatch, matchNumber):
 # ╔══════════════ End of Lists ═══════════════╗ #
 
 #Match 1 - GT vs CSK
-GT_vs_CSK = [
+GTvsCSK = [
     {
         'Match Number': 1,
         'info': {
@@ -69,8 +69,7 @@ GT_vs_CSK = [
         }
     },
 ]
-GTvsCSK = GT_vs_CSK
-CSKvsGT = GT_vs_CSK
+CSKvsGT = GTvsCSK
 
 #Match 2 - PBKS vs KKR
 PBKS_vs_KKR = [
