@@ -6,7 +6,7 @@
  #  |__| | _|      |_______|   |__|  |__| /__/     \__\  |__|      \______||__|  |__| |_______|_______/       |_______/ /__/     \__\  |__|    /__/     \__\ |______/  /__/     \__\ |_______/    |_______|
  #
 
-# ╔═════════════════════════════ Beigining of Code ════════════════════════════╗ #
+# ╔═════════════════════════════ Beginning of Code ════════════════════════════╗ #
 
 def get_match_info(iplMatch, matchNumber):
     #used to 
@@ -1930,8 +1930,8 @@ KKR_vs_RCB = [
         }
     },
 ]
-KKRvsRCB = KKR_vs_RCB
-RCBvsKKR = KKR_vs_RCB
+KKRvsRCB2 = KKR_vs_RCB
+RCBvsKKR2 = KKR_vs_RCB
 
 RR_vs_CSK = [
     {
@@ -1983,8 +1983,8 @@ RR_vs_CSK = [
         }
     },
 ]
-RRvsCSK = RR_vs_CSK
-CSKvsRR = RR_vs_CSK
+RRvsCSK2 = RR_vs_CSK
+CSKvsRR2 = RR_vs_CSK
 
 LSG_vs_PBKS = [
     {
@@ -2036,8 +2036,8 @@ LSG_vs_PBKS = [
         }
     },
 ]
-LSGvsPBKS = LSG_vs_PBKS
-PBKSvsLSG = LSG_vs_PBKS
+LSGvsPBKS2 = LSG_vs_PBKS
+PBKSvsLSG2 = LSG_vs_PBKS
 
 KKR_vs_GT = [
     {
@@ -2142,8 +2142,8 @@ DC_vs_SRH = [
         }
     },
 ]
-DCvsSRH = DC_vs_SRH
-SRHvsDC = DC_vs_SRH
+DCvsSRH2 = DC_vs_SRH
+SRHvsDC2 = DC_vs_SRH
 
 CSK_vs_PBKS = [
     {
@@ -2300,8 +2300,8 @@ RCB_vs_LSG = [
         }
     },
 ]
-RCBvsLSG = RCB_vs_LSG
-LSGvsRCB = RCB_vs_LSG
+RCBvsLSG2 = RCB_vs_LSG
+LSGvsRCB2 = RCB_vs_LSG
 
 DC_vs_GT = [
     {
@@ -2353,8 +2353,8 @@ DC_vs_GT = [
         }
     },
 ]
-DCvsGT = DC_vs_GT
-GTvsDC = DC_vs_GT
+DCvsGT2 = DC_vs_GT
+GTvsDC2 = DC_vs_GT
 
 LSG_vs_CSK = [
     {
@@ -2454,8 +2454,8 @@ PBKS_vs_MI = [
         }
     },
 ]
-PBKSvsMI = PBKS_vs_MI
-MIvsPBKS = PBKS_vs_MI
+PBKSvsMI2 = PBKS_vs_MI
+MIvsPBKS2 = PBKS_vs_MI
 
 SRH_vs_KKR = [
     {
@@ -2613,8 +2613,8 @@ MI_vs_CSK = [
         }
     },
 ]
-MIvsCSK = MI_vs_CSK
-CSKvsMI = MI_vs_CSK
+MIvsCSK2 = MI_vs_CSK
+CSKvsMI2 = MI_vs_CSK
 
 RCB_vs_DC = [
     {
@@ -2666,8 +2666,8 @@ RCB_vs_DC = [
         }
     },
 ]
-RCBvsDC = RCB_vs_DC
-DCvsRCB = RCB_vs_DC
+RCBvsDC2 = RCB_vs_DC
+DCvsRCB2 = RCB_vs_DC
 
 GT_vs_LSG = [
     {
@@ -2719,8 +2719,8 @@ GT_vs_LSG = [
         }
     },
 ]
-GTvsLSG = GT_vs_LSG
-LSGvsGT = GT_vs_LSG
+GTvsLSG2 = GT_vs_LSG
+LSGvsGT2 = GT_vs_LSG
 
 RR_vs_SRH = [
     {
@@ -2772,8 +2772,8 @@ RR_vs_SRH = [
         }
     },
 ]
-RRvsSRH = RR_vs_SRH
-SRHvsRR = RR_vs_SRH
+RRvsSRH2 = RR_vs_SRH
+SRHvsRR2 = RR_vs_SRH
 
 PBKS_vs_KKR = [
     {
@@ -2825,8 +2825,8 @@ PBKS_vs_KKR = [
         }
     },
 ]
-PBKSvsKKR = PBKS_vs_KKR
-KKRvsPBKS = PBKS_vs_KKR
+PBKSvsKKR2 = PBKS_vs_KKR
+KKRvsPBKS2 = PBKS_vs_KKR
 
 RCB_vs_MI = [
     {
@@ -3088,8 +3088,8 @@ SRH_vs_LSG = [
         }
     },
 ]
-SRHvsLSG = SRH_vs_LSG
-LSGvsSRH = SRH_vs_LSG
+SRHvsLSG2 = SRH_vs_LSG
+LSGvsSRH2 = SRH_vs_LSG
 
 DC_vs_PBKS = [
     {
@@ -3194,8 +3194,8 @@ RCB_vs_RR = [
         }
     },
 ]
-RCBvsRR = RCB_vs_RR
-RRvsRCB = RCB_vs_RR
+RCBvsRR2 = RCB_vs_RR
+RRvsRCB2 = RCB_vs_RR
 
 CSK_vs_KKR = [
     {
@@ -3247,8 +3247,8 @@ CSK_vs_KKR = [
         }
     },
 ]
-CSKvsKKR = CSK_vs_KKR
-KKRvsCSK = CSK_vs_KKR
+CSKvsKKR2 = CSK_vs_KKR
+KKRvsCSK2 = CSK_vs_KKR
 
 GT_vs_SRH = [
     {
@@ -3406,8 +3406,8 @@ DC_vs_PBKS = [
         }
     },
 ]
-DCvsPBKS = DC_vs_PBKS
-PBKSvsDC = DC_vs_PBKS
+DCvsPBKS2 = DC_vs_PBKS
+PBKSvsDC2 = DC_vs_PBKS
 
 SRH_vs_RCB = [
     {
@@ -3511,8 +3511,8 @@ PBKS_vs_RR = [
         }
     },
 ]
-PBKSvsRR = PBKS_vs_RR
-RRvsPBKS = PBKS_vs_RR
+PBKSvsRR2 = PBKS_vs_RR
+RRvsPBKS2 = PBKS_vs_RR
 
 CSK_vs_DC = [
     {
@@ -3564,8 +3564,8 @@ CSK_vs_DC = [
         }
     },
 ]
-CSKvsDC = CSK_vs_DC
-DCvsCSK = CSK_vs_DC
+CSKvsDC2 = CSK_vs_DC
+DCvsCSK2 = CSK_vs_DC
 
 LSG_vs_KKR = [
     {
@@ -3775,8 +3775,8 @@ CSK_vs_GT = [
         }
     },
 ]
-CSKvsGT = CSK_vs_GT
-GTvsCSK = CSK_vs_GT
+CSKvsGT2 = CSK_vs_GT
+GTvsCSK2 = CSK_vs_GT
 
 MI_vs_LSG = [
     {
@@ -3828,8 +3828,8 @@ MI_vs_LSG = [
         }
     },
 ]
-MIvsLSG = MI_vs_LSG
-LSGvsMI = MI_vs_LSG
+MIvsLSG2 = MI_vs_LSG
+LSGvsMI2 = MI_vs_LSG
 
 GT_vs_MI = [
     {
@@ -3881,8 +3881,8 @@ GT_vs_MI = [
         }
     },
 ]
-GTvsMI = GT_vs_MI
-MIvsGT = GT_vs_MI
+GTvsMI2 = GT_vs_MI
+MIvsGT2 = GT_vs_MI
 
 CSK_vs_GT = [
     {
@@ -3934,8 +3934,8 @@ CSK_vs_GT = [
         }
     },
 ]
-CSKvsGT = CSK_vs_GT
-GTvsCSK = CSK_vs_GT
+CSKvsGT3 = CSK_vs_GT
+GTvsCSK3 = CSK_vs_GT
 # ╚══════════════ End of Lists ═══════════════╝ #
 
 # ╚═══════════════════════════════ End of Code ═════════════════════════════════╝ #
