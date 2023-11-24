@@ -1,25 +1,32 @@
+#check userMatch input for vaild input
 def getValidMatch():
     isValidMatch = False
     while isValidMatch == False:
         userMatch = input("\033[1mTeams\033[0m (Format: TEAM1vsTEAM2 or TEAM2vsTEAM1 Note: no spaces): ")
-    #remove spaces at start and end and make lowercase
+    #remove spaces at start and end
         userMatch = userMatch.strip()
     #check length of string and if it is alphabetical
-        if userMatch.isalpha() == True:
+        if userMatch.isalnum() == True:
             isValidGuess = True
             return userMatch
         else: 
             print("Invalid Input!!! Please enter valid input (reffer to format given)")
+
+#check matchNum input for vaild input
 def getValidMatchNum():
     isValidMatchNum = False
     while isValidMatchNum == False:
-        matchNum = int(input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): "))
+        matchNum = input("\033[1mMatch Number\033[0m (Ex. 1, 2, 3, etc.): ")
 
-        if 0 < matchNum < 75:
-            isValidMatchNum = True
-            return matchNum
-        else:
-            print("Invalid input!!! Match number should be a between 1 - 74.")
+        if matchNum.isdigit():
+            matchNum = int(matchNum)
+            if 0 < matchNum < 75:
+                isValidMatchNum = True
+                return matchNum
+            else:
+                print("Invalid input!!! Match number should be a between 1 - 74.")
+        else: 
+            print("Invalid input!!! Please input a number.")
 
 print('''
 
@@ -81,8 +88,9 @@ Match 74 - CSKvsGT3
 """)
 
 from matchDatabase import * #imports all things like funcation from matchDatabase file
-#Ask User for input - For what match do They want to display info for?
-print("\033[3m----- Please input Match for which you want to display info for -----\033[0m")
+
+#Ask User for input?
+print("\033[3m----- Please input Match for which you want to display info for. Make sure to follow propper formating!! -----\033[0m")
 print()
 userMatch = getValidMatch()
 matchNum = getValidMatchNum()
