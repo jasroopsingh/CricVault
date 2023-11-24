@@ -2929,7 +2929,7 @@ KKRvsRR = [
 ]
 RRvsKKR = KKRvsRR
 
-MIvsGT = [
+MIvsGT2 = [
     {
         'Match Number': 57,
         'info': {
@@ -2979,7 +2979,7 @@ MIvsGT = [
         }
     },
 ]
-GTvsMI = MIvsGT
+GTvsMI2 = MIvsGT2
 
 SRHvsLSG2 = [
     {
@@ -3603,7 +3603,7 @@ SRHvsMI = [
 ]
 MIvsSRH = SRHvsMI
 
-RCBvsGT2 = [
+RCBvsGT = [
     {
         'Match Number': 70,
         'info': {
@@ -3653,7 +3653,7 @@ RCBvsGT2 = [
         }
     },
 ]
-GTvsRCB = RCBvsGT2
+GTvsRCB = RCBvsGT
 
 CSKvsGT2 = [
     {
@@ -3759,7 +3759,7 @@ MIvsLSG2 = [
 ]
 LSGvsMI2 = MIvsLSG2
 
-GTvsMI2 = [
+GTvsMI3 = [
     {
         'Match Number': 73,
         'info': {
@@ -3809,7 +3809,7 @@ GTvsMI2 = [
         }
     },
 ]
-MIvsGT2 = GTvsMI2
+MIvsGT3 = GTvsMI3
 
 CSKvsGT3 = [
     {
