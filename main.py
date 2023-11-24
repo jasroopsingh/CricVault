@@ -53,30 +53,30 @@ print('''
 ''')
 print("""
 \033[1mGroup Stage\033[2m                                                                                                    
-Match 1 - GTvsCSK         Match 19 - KKRvsSRH       Match 37 - RRvsCSK         Match 55 - CSKvsDC          
-Match 2 - PBKSvsKKR       Match 20 - RCBvsDC        Match 38 - LSGvsPBKS       Match 56 - KKRvsRR           
-Match 3 - LSGvsDC         Match 21 - LSGvsPBKS      Match 39 - KKRvsGT         Match 57 - MIvsGT            
-Match 4 - RRvsSRH         Match 22 - KKRvsMI        Match 40 - DCvsSRH         Match 58 - SRHvsLSG          
-Match 5 - MIvsRCB         Match 23 - GTvsRR         Match 41 - CSKvsPBKS       Match 59 - DCvsPBKS
-Match 6 - CSKvsLSG        Match 24 - CSKvsRCB       Match 42 - RRvsMI          Match 60 - RCBvsRR
-Match 7 - DCvsGT          Match 25 - MIvsSRH        Match 43 - RCBvsLSG        Match 61 - CSKvsKKR
-Match 8 - PBKSvsRR        Match 26 - LSGvsRR        Match 44 - DCvsGT          Match 62 - GTvsSRH
-Match 9 - KKRvsRCB        Match 27 - RCBvsPBKS      Match 45 - LSGvsCSK        Match 63 - LSGvsMI
-Match 10 - SRHvsLSG       Match 28 - KKRvsDC        Match 46 - PBKSvsMI        Match 64 - DCvsPBKS
-Match 11 - RRvsDC         Match 29 - SRHvsCSK       Match 47 - SRHvsKKR        Match 65 - SRHvsRCB
-Match 12 - MIvsCSK        Match 30 - GTvsLSG        Match 48 - RRvsGT          Match 66 - PBKSvsRR
-Match 13 - GTvsKKR        Match 31 - PBKSvsMI       Match 49 - MIvsCSK         Match 67 - CSKvsDC
-Match 14 - PBKSvsSRH      Match 32 - RCBvsRR        Match 50 - RCBvsDC         Match 68 - LSGvsKKR
-Match 15 - RCBvsLSG       Match 33 - CSKvsKKR       Match 51 - GTvsLSG         Match 69 - SRHvsMI
-Match 16 - DCvsMI         Match 34 - DCvsSRH        Match 52 - RRvsSRH         Match 70 - RCBvsGT
-Match 17 - RRvsCSK        Match 35 - GTvsMI         Match 53 - PBKSvsKKR         
-Match 18 - PBKSvsGT       Match 36 - KKRvsRCB       Match 54 - RCBvsMI       
+Match 1 - GTvsCSK         Match 19 - KKRvsSRH        Match 37 - RRvsCSK2         Match 55 - CSKvsDC          
+Match 2 - PBKSvsKKR       Match 20 - RCBvsDC         Match 38 - LSGvsPBKS2       Match 56 - KKRvsRR           
+Match 3 - LSGvsDC         Match 21 - LSGvsPBKS       Match 39 - KKRvsGT          Match 57 - MIvsGT2            
+Match 4 - RRvsSRH         Match 22 - KKRvsMI         Match 40 - DCvsSRH2         Match 58 - SRHvsLSG2          
+Match 5 - MIvsRCB         Match 23 - GTvsRR          Match 41 - CSKvsPBKS        Match 59 - DCvsPBKS
+Match 6 - CSKvsLSG        Match 24 - CSKvsRCB        Match 42 - RRvsMI2          Match 60 - RCBvsRR2
+Match 7 - DCvsGT          Match 25 - MIvsSRH         Match 43 - RCBvsLSG2        Match 61 - CSKvsKKR2
+Match 8 - PBKSvsRR        Match 26 - LSGvsRR         Match 44 - DCvsGT2          Match 62 - GTvsSRH
+Match 9 - KKRvsRCB        Match 27 - RCBvsPBKS       Match 45 - LSGvsCSK         Match 63 - LSGvsMI
+Match 10 - SRHvsLSG       Match 28 - KKRvsDC         Match 46 - PBKSvsMI2        Match 64 - DCvsPBKS2
+Match 11 - RRvsDC         Match 29 - SRHvsCSK        Match 47 - SRHvsKKR         Match 65 - SRHvsRCB
+Match 12 - MIvsCSK        Match 30 - GTvsLSG         Match 48 - RRvsGT           Match 66 - PBKSvsRR2
+Match 13 - GTvsKKR        Match 31 - PBKSvsMI        Match 49 - MIvsCSK2         Match 67 - CSKvsDC2
+Match 14 - PBKSvsSRH      Match 32 - RCBvsRR         Match 50 - RCBvsDC2         Match 68 - LSGvsKKR
+Match 15 - RCBvsLSG       Match 33 - CSKvsKKR        Match 51 - GTvsLSG2         Match 69 - SRHvsMI
+Match 16 - DCvsMI         Match 34 - DCvsSRH         Match 52 - RRvsSRH2         Match 70 - RCBvsGT
+Match 17 - RRvsCSK        Match 35 - GTvsMI          Match 53 - PBKSvsKKR2         
+Match 18 - PBKSvsGT       Match 36 - KKRvsRCB2       Match 54 - RCBvsMI2       
 \033[0m
 \033[1mQualifiers/Final\033[2m
-Match 71 - CSKvsGT
-Match 72 - MIvsLSG
-Match 73 - GTvsMI
-Match 74 - CSKvsGT
+Match 71 - CSKvsGT2
+Match 72 - MIvsLSG2
+Match 73 - GTvsMI3
+Match 74 - CSKvsGT3
 \033[0m
 """)
 
