@@ -146,8 +146,8 @@ while True:
     else:
         #if match not found becuase of wrong input in match number then tells that
         print("The match was not found. Double-check your input to see if you have the correct match name and match number! Refer to the match table provided above to find the matching match number for the match.")
-        user_input = input("Press 'enter' key  to retry or type 'exit' to quit: ") #asks user if they want to try input again enter = try again and exit string = program exit
-        if user_input.lower() == 'exit':
+        user_Input = input("Press 'enter' key  to retry or type 'exit' to quit: ") #asks user if they want to try input again enter = try again and exit string = program exit
+        if user_Input.lower() == 'exit':
             break  # Exit the loop if the user wants to quit
         #re-promts user for input
         else: 
